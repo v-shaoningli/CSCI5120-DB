@@ -1,0 +1,2097 @@
+2
+AICHAINExecutive Summary
+Our vision for AICHAIN is to create a platform that can facilitate 
+the communication, cooperation and data sharing among partic -
+ipants by enabling data transaction, protecting data security and 
+disrupting data concentration, therefore improving the efficiency 
+and productivity of the AI industry and allowing everybody, not just 
+the tech giants, to gain the most out of the digitalization era. The AICHAIN is a public chain that is specially designed as a 
+blockchain infrastructure for AI applications. The AICHAIN 
+inherited the advantages of blockchain technology, such as decen -
+tralization, open source, tamper-proof and anonymous, to solve 
+the current challenges of AI such as data domination.  However, 
+different from other blockchains that are strictly constrained by 
+data size and programming languages, the AICHAIN used technol -
+ogies such as plug-in visual machine, out-of-chain storage and API 
+etc. to allow larger data set and different programming languages. 
+Moreover, as the ability to attract applications, users and developers 
+remind the key challenge for all competing AI blockchain platforms, 
+AICHAIN has gained a strong competitive advantage by having 
+reached strategic partnerships with multiple AI applications 
+teams to kick start the ecosystem among data supplier, application 
+developers, platform resource providers and consumers. 3
+AICHAINContents    
+ The background of AICHAIN  ������������������������������������������������������������������������������������� 1
+1.1 The raising of Blockchain technology 1
+1.2 The development and the current status of AI 3
+1.3 How blockchain can improve AI  ............................................................................................................ 5
+1.4 The challenges of merging AI with blockchain 6
+1.5 How AICHAIN is going to solve the challenges 6
+ The AICHAIN platform  ����������������������������������������������������������������������������������������������� 8
+2.1 Overview of AICHAIN  .............................................................................................................................. 8
+2.2 The technical of AICHAIN  ....................................................................................................................... 9
+2.3 The Ecosystem of AICHAIN  .................................................................................................................. 12
+2.4 The Market Position of AICHAIN  ......................................................................................................... 13
+2.5  The AICHAIN Applications under Developing 14
+ Development plan of AICHAIN  ������������������������������������������������������������������������������� 17
+3.1 Development road map of AICHAIN  ................................................................................................... 17
+3.2 Future iterative planning of AICHAIN 18
+ AIT ������������������������������������������������������������������������������������������������������������������������������ 19
+4.1 Introduction of AIT  ................................................................................................................................ 19
+4.2 Distribution plan of AIT  ........................................................................................................................ 19
+4.3 AIT Issuing .............................................................................................................................................. 20
+ AICHAIN Foundation  ������������������������������������������������������������������������������������������������ 22
+5.1 Establishment of the foundation  ........................................................................................................ 22
+5.2 Governance principle  ............................................................................................................................ 22
+5.3 AICHAIN governance model  ................................................................................................................ 25
+5.4 AICHAIN human resource management 28
+5.5 Risk assessment and decision making mechanism of AICHAIN foundation 29
+5.6 AICHAIN foundation economy  ............................................................................................................ 29
+ AICHAIN Team  ���������������������������������������������������������������������������������������������������������� 32
+6.1 Core team members  ............................................................................................................................. 32
+6.2 Advisory Team  ....................................................................................................................................... 36
+6.3 Strategic partners  ................................................................................................................................. 38
+ Disclaimer of Liability and Risk Factors 46
+Risk Factors  .................................................................................................................................................. 47AICHAIN 
+Whitepaper1
+AICHAIN The background of AICHAIN
+1�1 The raising of Blockchain technology
+The blockchain technology contains the following advantages:
+Decentralized
+Open SourceBlockchain is one of the mostly discussed 
+technology nowadays as a potential 
+successor of the internet. The technology 
+combines a set of existing technology, 
+including distributed data storage, peer-to-
+peer transmission, consensus mechanism 
+and encryption algorithm, to introduce of 
+a new way of data formation, transmis -
+sion, storage and usage. The breakthroughs 
+brought by blockchain technology has the 
+potential to fundamentally change the 
+existing economic and financial mode of 
+operation and may even lead to a new tech -nological innovation and industrial change 
+on a global scale.
+A blockchain is a tamper-proof and decen -
+tralized data structure that joins data 
+blocks chronologically. The nature of the 
+blockchain is a distributed ledger system. 
+Encrypted digital assets, such as Bitcoin, is 
+the digital currency of this system. In other 
+words, blockchain serves as the underlying 
+technology for digital assets and for a 
+distributed, encrypted and credible 
+accounting and clearing system.
+Decentralization is the fundamental characteristic of the blockchain. In a traditional 
+centralized network system, the destruction of a central node can paralyze the entire 
+system. However, for the blockchain network, due to the use of distributed ledger 
+and storage, there is no centralized hardware or institution, so rights and obligations 
+of any node are equal.  Therefore, data blocks in the system will be maintained and 
+protected by all the notes in the system, and attacking a node cannot destroy the 
+entire network.
+Blockchain adapts an open source system, which promotes communication, partici -
+pation, and development.  Except for the private information of transaction parties, 
+blockchain publics all its data and codes, so that anyone can query blockchain data AICHAIN 
+Whitepaper2
+AICHAINTamper-proof
+AnonymousOnce a piece of information has been verified and added to the blockchain, 
+the information on the chain is backed up in each of the nodes in the network 
+permanently. As a result, to temper the information, the only way is to attack 
+the entire system, requiring a computation power that is stronger than all the 
+computation power in the earth combined. Therefore, the data in the network is 
+nearly impossible to tamper.
+In the blockchain system, although all data logging and operation updates are made 
+public to the whole network node, the private information of the trader is handled 
+by hash encryption, which allows anonymous data exchange and the transaction. 
+Encryption is simply a method of conversion that converts the original information 
+through an algorithm. The recipient of the information can decrypt by the secret 
+key to get the original information. The blockchain uses many mature encryption 
+algorithms to ensure the system is reliability and security.
+Block chain technology, after the steam 
+engine, power, information and Internet 
+technology, has the highest potential to be 
+the core technology that triggers the fifth 
+round of subversive revolutionary wave. 
+Just as the steam engine frees people’s 
+productivity, electricity has solved the most 
+basic needs of people, and information technology and the Internet have revo -
+lutionized traditional industries, such 
+as retailors, music and publications, the 
+block chain technology has a potential to 
+achieve decentralized digital asset transfer 
+and to promote the transformation of 
+“information Internet” to “value Internet”.and the development of related applications, the entire system information is highly 
+transparent.AICHAIN 
+Whitepaper3
+AICHAIN1�2 The development and the current status of AI
+Artificial intelligence (AI) enables 
+automation of some tasks that have long 
+required human labor. These transforma -
+tions will open up new opportunities for 
+individuals, the economy, and society and 
+unleash the next wave of digital disruption.
+The enormous potential benefits of AI 
+have already been widely accepted, and 
+the industry has been on an acceleration. 
+According to Mckinsey report:
+(1) AI can bring tangible benefits to 
+serious adopters
+Serious adopters are able to obtain real 
+value through AI that early adopters that 
+combine strong digital capability with 
+proactive strategies have higher profit 
+margins and expect the performance gap 
+with other firms to widen in the future in 
+the areas at least of retail, electric utilities, 
+manufacturing, health care, and education. 
+According to Accenture, by 2035, companies 
+that can successfully implement AI will 
+increase their profit by 38% on average. 
+Besides, AI will bring 14 trillion GVA 
+(Gross Value Added) to 12 countries and 16 
+industries.(2) Investment is growing fast
+The same Mckinsey report also reveals 
+that the investment in AI is growing at a 
+high rate. In 2016, companies have invested 
+$26B to $39B USD in artificial intelligence 
+globally, a number that accounts for 3 times 
+external investment growth since 2013. 
+90 percent of this spent on R&D andde -
+ployment, and 10 percent on AI acquisi -
+tions. VC and PE financing, grants, and 
+seed investments also grew rapidly, albeit 
+from a small base, to a combined total of 
+$6 billion to $9 billion. 
+(3) Countries have been competing on AI
+US, China, Japan and European countries 
+all have provided favorable regulations 
+and funding support to encourage AI 
+development. December 2017, the Ministry 
+of Industry and Information Technology 
+(MIIT) of China announced the “Encourage 
+the New Generation of AI development 
+Three Year Plan(2018-2020)”, aiming to gain 
+the global competition in the AI technology 
+by the year of 2020.
+With world-wide enthusiasm and several technological breaks though, the future 
+of AI industry seems to be brighter and more tangible than over. AICHAIN 
+Whitepaper4
+AICHAINHowever, several challenges still remind until we can see its full potential:
+a. Data is concentrated at the hands of a 
+few large players
+AI loves data. The more data, the better the 
+models. However, under the current model, 
+data is mainly collected and dominated 
+by large players so that it is difficult for 
+a startup team to lunch an AI project as 
+they do not obtain sufficient data for model 
+training. 
+b. The ownership of data is unclear
+As sensors are embedded in all sorts of 
+everyday objects, from connected cars to 
+devices across the IoT, consumer data will be generated exponentially by these devices 
+and stored in centralized databases. 
+However, users who helped generate the 
+data cannot benefit from the process.
+c. The quality and “trainability” of big 
+data is in question
+Big data has great potential to enhance 
+artificial intelligence AI models by 
+providing richer and more comprehensive 
+data set. However, big data itself is facing a 
+challenge of 3Vs, namely, Variety, Velocity 
+and Volume, leading to a noisy, messy, 
+unstructured and difficult-to-interpret data 
+set.AICHAIN 
+Whitepaper5
+AICHAIN1�3 How blockchain can improve AI
+The characteristics of blockchain can 
+overcome the challenges of AI and 
+transform AI by:
+(1)  Decentralized/shared control 
+encourages data sharing
+In a public blockchain, data can be shared 
+among different ecosystems in a plan -
+et-scale ecosystem. All participants of 
+the AI industry: consumers, developers, 
+resource providers and data suppliers can 
+freely exchange resources and value on a 
+global scale and improve global efficiency. 
+For instance, spikes in energy usage in 
+some factories in China might be correlated 
+with fraudulent auto parts emerging on 
+the market a day’s worth of shipping 
+later. Overall, blockchain will facilitate 
+the process of aggregating, sanitizing, 
+repackaging and circulating of data. 
+(2) Improve data quality
+Leads to provenance on training/testing 
+data & models, to improve the trustworthi -
+ness of the data & models. This application 
+addresses the fact that if you train on 
+garbage data, then you’ll get a garbage 
+model. Same thing for testing data. Garbage 
+in, garbage out.
+The blockchain improves the credibility 
+of the data set by the implementation of game theory and its technical structure. 
+Moreover, as blockchain allows data to be 
+exchanged for value easily, it incentivizes 
+data providers to provide clean and easy to 
+use data. 
+(3) Native assets/exchanges
+Leads to training/testing data & models 
+as intellectual property (IP) assets, which 
+leads to decentralized data & model 
+exchanges. It also gives better control for 
+upstream usage of data.
+Claiming copyright of and licensing data 
+& models was possible before blockchain 
+technology. The laws have served this for a 
+while. But blockchain technology makes it 
+better, because:
+• If someone has created a data or 
+model, such record will be permanently 
+recorded in the blockchain. The creator can 
+claim the copyright, regardless of if having 
+the intention to commercialize it. 
+• With the copy right, the creator can 
+license usage rights to others. For example, 
+you can license your data to someone else 
+to build their own model.
+• A tamper-resistant global public 
+registry helps the creator to protect the 
+copy right if any disrupt occurs.AICHAIN 
+Whitepaper6
+AICHAIN1�4 The challenges of merging AI with blockchain
+1�5 How AICHAIN is going to solve the challenges(1)  Size and programming language 
+constrains hinder AI applications
+Currently, all blockchains targeted on 
+AI applications are all based on the 
+Ethereum, whose capability is limited 
+by the size and programing language of 
+its virtual machine. A simple application 
+such as CryptoKitties has caused the 
+Ethereum blockchain crashed and slowed 
+down. Therefore, although the Ethereum 
+blockchain might be good for writing smart 
+contracts and record transactions history, 
+for complicated applications such as AI, 
+blockchain has to upgrade its design to 
+support larger data set and more advanced 
+programming languages.(2) Few AI application has been running 
+on current blockchains
+As one key benefit of blockchain is data 
+sharing, without sufficient AI applica -
+tions on the blockchain to share their data, 
+the value of blockchain cannot be fully 
+utilized. For AI developers, it’s in their best 
+interest to wait and see which blockchain 
+attracts real AI applications before they 
+devote their time and energy to develop 
+an application on the blockchain. As a 
+result, we can see the momentum effect 
+in this market is significant and starting 
+a momentum by attracting the first group 
+of developers is considered to be most 
+difficult. The current AI blockchains, 
+however, still do not have initial adopters. 
+(1) Plug-in virtual machine
+The way for AICHAIN to overcome the 
+language constrain is to use the plug-in 
+virtual machine, an integrated open-source 
+docker container. By relying on conventions 
+and publishing a uniform standard of 
+docker IMG image files, the application 
+environment of the AICHAIN can be unified 
+and upgraded independently. Moreover, 
+docker IMG image files are able to integrate 
+multiple programming languages, 
+including sophisticated AI applications such as tenserflow, to make it possible to 
+trigger the running of AI applications on 
+AICHAIN nodes.
+(2) Out-of-chain data storage
+AICHAIN will store executable files 
+data and resources data outside of the 
+blockchain and only include the description 
+and tag of such data on the chain, therefore 
+to ensure sophisticated application and 
+large data set can be run on the AICHAIN 
+platform. AICHAIN 
+Whitepaper7
+AICHAIN(3) Easy adoption
+AICHAIN provides API dedicated to deploy, 
+extract, and enquire application data 
+resources, therefore allowing developers 
+to easily connect their AI applications to 
+the AICHAIN platform to complete user 
+identity verification, payment verifica -
+tion and so on, without the requirement of 
+understanding the underlying blockchain 
+technology. (4) Ready-to-use applications
+The AICHAIN team has rich experience in 
+AI technologies and are running multiple 
+successful AI applications. Unlike other 
+AI blockchain platforms that depend on 
+external AI applications, applications run 
+by the AICHAIN team will be the first group 
+of applications to be run of the chain to 
+kick start the momentum and attract more 
+applications into the platform. AICHAIN 
+Whitepaper8
+AICHAIN The AICHAIN platform
+2�1 Overview of AICHAIN
+The AICHAIN will focus on the development 
+of artificial intelligence, the purpose is to 
+make artificial intelligence more effective 
+and secure to benefit everyone’s life. In 
+the future where AI supplies new produc -
+tivity, blockchain will be used to maintain 
+production relationship. The purpose 
+of AICHAIN is to build a platform with blockchain as an underlying ledger. Under 
+the protection of data ownership, data 
+owners are encouraged to share data, and 
+therefore application developers will have 
+more data to create more valuable appli -
+cations to meet the needs of all partici -
+pants and the market, making the entire 
+ecosystem richer and more robust.
+1  Create a benign ecosystem and 
+encourage more people to participate in 
+the development and implementation of AI 
+applications;
+2  Promote the development of artificial intelligence in a credible and reliable 
+environment;
+3  Turn privately generated data into 
+more refined services for everyone.
+Ultimately, we hope the AICHAIN platform 
+will transform the AI industry by 
+redirecting the power from monopolistic 
+companies to autonomous communities, 
+so as to attract more people to participate in the development of artificial intelli -
+gence and truly realize the sound ecological 
+development of co-construction and 
+sharing.The purpose of AICHAIN is to:AICHAIN 
+Whitepaper9
+AICHAIN
+Companies specializing in image tagging, expecting to gain revenue by 
+suppling the data AI needs.
+Companies specializing in developing AI applications, expecting to gain 
+rewards by developing AI applications.
+Companies having a lot of resources such as graphics servers, tensorflow 
+and caffe platform operating environments, expecting to make money by 
+renting out those resources
+An ordinary user who has a bunch of cats and dogs pictures, hoping to 
+have a tool to help him store the pictures by category. This paper will explain how the AICHAIN works through a classic “cat or dog” graphic 
+identification example. For a complete understanding of the AICHAIN, you might refer to 
+our technical yellow paper.2�2 The technical of AICHAIN
+Suppose there are 4 main bodies (companies or individuals):
+A
+B
+C
+D
+Scenario 1: Developers need data to complete machine learning 
+in order to develop AI applications
+A: is the data provider, who 
+owns pictures of cats and dogs, 
+as well as the marking results 
+(cats or dogs) for each picture.
+B: is the consumer of data, a 
+company that develops an AI 
+application that can identify 
+cats and dogs pictures.
+AICHAIN 
+Whitepaper10
+AICHAINScenario 2: Users use their own computer to run “Cat or Dog” AI 
+application
+Scenario 3: Users use their computer resources provided by resource 
+providers on the platform to run “Cat or Dog” AI applicationB: is an AI application provider 
+that develops the “Cat or Dog” 
+identification AI application. 
+The application provider then 
+deploys the information of the 
+application to the AICHAIN for 
+users to download the “Cat or Dog” 
+application executable file data
+D: ordinary users who have their 
+own graphics card computer that 
+can support the operation of cats 
+and dogs to identify AI application.
+Step 1: B release the information of “Cat or Dog” 
+application to the blockchain and provide AI 
+application executable file data for users to 
+download.
+Step 2: User D does not have a suitable 
+computer to run the “Cat of Dog” application, so 
+he/she need to borrow C’s platform resources, 
+which can be obtained by transferring AITs to 
+the ADU address of the resource provided by C.  
+Step 3: C then release a graphics AI server 
+resource to D.
+Step 4: D then pays AITs to B to obtain the ADU 
+address of “Cat or Dog” application from B.
+Step 5: D download and run the “Cat or Dog” 
+on the computer resource rented from the 
+platform. Then D can upload the picture and 
+finish the classification.
+AICHAIN 
+Whitepaper11
+AICHAINOther Details
+1 Data providers, application providers, 
+and platform resource providers all deploy 
+their own resources to the blockchain by 
+creating a single transaction.
+2 Consumers need to transfer virtual 
+currency to the address of the ADU unit of 
+the above resources to apply for the right to 
+use.
+3 In the subsequent process, consumers 
+need to provide the public key of their 
+wallet using to pay for: the data provider, the application provider and the platform 
+resource providers. Therefore, resource 
+provider can have enough information 
+to verify the user’s identity and whether 
+there is enough virtual money to pay. (See 
+Chapter 5 of AICHAIN Yellow Paper for 
+details.)
+4 All applications shall agree to develop 
+and run under the unified Docker IMG 
+running environment released by the 
+AICHAIN to ensure compatibility.AICHAIN 
+Whitepaper12
+AICHAINBy using blockchain technology to ensure the 
+sovereignty of the data and provide a robust 
+market place for all participants of the AI 
+industry, the AICHAIN is able to incentivize 
+more participants to join the AICHAIN 
+community and gradually enrich the data layer resources and empower everyone to 
+gain the most out of AI. 
+In the AICHAIN ecosystem, there are four 
+groups of participants:
+2�3 The Ecosystem of AICHAINAICHAIN 
+Whitepaper13
+AICHAIN
+For business (developers and data suppliers): a Resource Sharing Platform
+AICHAIN as a public infrastructure, will 
+not only connect but also promote resource 
+sharing among the participants, in order 
+to disrupt data concentration, protect data 
+ownership, encourage specialization and improve productivity. Therefore AICHAIN 
+is able to benefit everyone within the 
+system and increase the total value on the 
+platform.
+To further improve the efficiency of data 
+sharing on the platform, AICHAIN will 
+launch AI search engine so that both 
+suppliers and demanders can easily find a 
+matcher. 
+Currently, AICHAIN has already reached 
+strategic partnerships with multiple AI 
+developers and Data suppliers:
+• AI Developers: NetPosa, Coolpad Mobile, Changhong Electric, EasyAI, Institute of 
+Beidou Applied Technology                                                             
+• Data Supplier: National Business Daily, 
+Yi Zhibo, San Qian Ke, Chuan Huo Live, 
+Huo Yan Finance, Ba Dou Mao, Bingo Talk, 
+Miracle VR, Miracle Media, SceneryFish, 
+Matrix Game, Li Guangman Bingdian 
+Comment2�4 The Market Position of AICHAINAICHAIN 
+Whitepaper14
+AICHAINFor consumers, AICHAIN can be simply 
+regarded as an AI Application Store where 
+they can assemble different AI applications 
+into their own and special AI application. 
+Besides, with the training of application 
+with consumers’ own personal data, such 
+application will be truly retailor-make and 
+unique. All the transactions will be done through AIT.
+The AICHAIN aims to provide all possible 
+AI applications that to cover the needs and 
+provide convenience for one’s personal and 
+professional life, such as AI consulting, AI 
+analysis, and AI medication etc.For consumers: an AI Application Store
+2�5  The AICHAIN Applications under Developing
+The current recruitment process often 
+requires the matching services provided by 
+third-party platforms, and therefore, those 
+platforms collected a significant amount of job seekers’ sensitive information. As 
+a result, job-seekers are facing the risk of 
+private information leakage, which leads to 
+frustrating calls and email harassment and To attract more participates to the AICHAIN 
+community and speed up the formation of 
+AICHAIN Ecosystem, the AICHAIN has been developing several AI applications for the 
+AICHAIN.
+2�5�1 AI recruitmentAICHAIN 
+Whitepaper15
+AICHAINThe users will have their own smart 
+assistant. The assistant will not only help 
+users to schedule and find information, 
+but also accompany their own chat, watch 
+a movie, play video games, which is what 
+many people expect.
+With the development of many AI applica -
+tions, in the future, everyone can use the AI 
+application store to transfer the intelligent 
+assistant module and input their own 
+information and requirements. In this way, 
+a dedicated virtual intelligent assistant will 
+be generated, the whole process just like 
+downloading the APP to the mobile phone.
+In daily life, the assistant will chat with 
+you at any time, watch the sports game 
+with you, and share your joys and sorrows when watching the drama;
+In various meetings, the assistant will not 
+only help you to record the content of the 
+meeting, to form the meeting summary, but 
+also to help you to remember the identity 
+and appearance of each participant;
+In the live broadcast scene, the anchors’ 
+intelligent assistant will assist in the active 
+atmosphere and interact with the fans 
+according to the instructions of the anchor; 
+the user’s intelligent assistant may send 
+gifts to the anchor and interact with the 
+anchors’ assistants.
+In the game scene, the image of the 
+exclusive intelligent assistant will replace 
+the traditional role of participation in the 2�5�2 AI assistantother security issues.
+AI Recruitment, which will be found in the 
+AICHAIN though AICHAIN search engine, 
+can create a safe hiring and job seeking 
+environment where:
+1.  Companies can post job descriptions 
+and requirement and  candidates can 
+describe their own education background, 
+learning ability and work experience, in a 
+completely anonymous blockchain system,
+2. Smart recruitment application will 
+match both sides through algorithm, 
+and will match both sides’ information 
+feedback;3. If the company express the interest, the 
+entrance of CV delivery will be opened;
+4. At the same time, if the job seeker intends 
+to apply, they will send the resume to the 
+company.
+Whether business user or individual 
+users, they just need to select the relevant 
+application in the AI store, to pay 
+developers the AIT to use their own data 
+resources to create a personalized smart 
+recruitment process. This will signifi -
+cantly improve hiring efficiency and 
+avoid the risk that third-party platforms 
+storing significant amounts of personal 
+information.AICHAIN 
+Whitepaper16
+AICHAIN2�5�3 VR-AI tutor
+Online education always attracts a lot of 
+attention because it offers a huge variety 
+of contents and enables students to listen 
+to the class provided by world class 
+instructors while at a low financial and 
+time cost.
+However, the problem with current 
+online education is that the contents are 
+not interactive and engaging enough for 
+students to stay interested.
+The combination of AR and AI can solve 
+this problem by providing: 
+Rich online learning resources: bringing 
+together all kinds of online education 
+resources, teacher courses, without time 
+and space constraints.Customized contents: learning plans and 
+materials will be adopted automatically 
+through interactions with the learner to 
+achieve optimized learning outcomes.
+Engaging delivery method: VR simulates an 
+in-class and other more engaging learning 
+environment so that learners do not need to 
+stare the screen for a long time, creating a 
+fun learning experience.
+Right now, VR-AR tutor focus on children 
+education. In the future, VR-AR tutor will 
+be extended to more subdivided areas such 
+as learning foreign languages, musical 
+instruments, dance, calligraphy and 
+painting as well as counseling models for 
+adults so that you can learn without leaving 
+home.game. Players will feel more kind in person, 
+and the assistant can even continue the 
+game when you must temporarily leave.
+In the future, the virtual assistant will be 
+more personalized by identifying your appearance, your voice, and recording 
+all your habits and preferences. As the 
+interaction scenario increases and deepens, 
+the accumulated personal data will help 
+the assistant better domesticated, and have 
+unique charisma.AICHAIN 
+Whitepaper17
+AICHAIN Development plan of AICHAIN
+3�1 Development road map of AICHAIN
+June 2017 Project started
+Aug. 2017 Proof of concept
+Nov. 2017 White Paper 1.0 completed. Signed strategic partnership
+Dec. 2017 Project promotion
+2018 Q1 Technical Yellow Paper 1.0 completed
+Finalize the basic parameters and POW consensus parameters
+Launch AIT
+2018 Q2 Start to develop AICHAIN full nodes, mining algorithms and trading 
+application information expansion
+Start to develop AIT-based AI application distribution platform
+2018 Q3 Complete AICHAIN full nodes mining and trading transformation 
+and release the test environment.
+Complete the development of the mining program, released the test 
+environment.
+Completed the AIT-based AI application distribution platform 
+development, release the test environment
+Complete docker operating environment parameter standard 
+formulation and operating environment integration test
+2018 Q4 Complete the AICHAIN all nodes and docker operating environment 
+integration, release formal network operation
+Release project code and related parameters of the open source codeAICHAIN 
+Whitepaper18
+AICHAIN3�2 Future iterative planning of AICHAIN
+Iteration of the underlying architecture
+Business application iterationWhen the AICHAIN code itself loopholes, usually take a system upgrade. A loophole 
+needs to be analyzed, tested and audited by a code committee and submitted to the deci -
+sion-making committee for filing. When the following major loopholes (not limited to) to 
+take a system upgrade:
+• Affect user funds
+• Major safety issues
+• Affect system security
+When minor vulnerabilities occur, the code board is patched directly.
+The AICHAIN will be a completely open source project. The AICHAIN system hopes 
+to link the block chain with the reality through technical innovation and conceptual 
+innovation. Therefore, in commercial applications, the AICHAIN Foundation will select 
+the appropriate third-party cooperation, industry and application iteration.AICHAIN 
+Whitepaper19
+AICHAINAIT is a decentralized blockchain digital asset that is issued through AICHAIN and is 
+served as a medium of exchange on the AICHAIN Platform. The AICHAIN will adopt the 
+consensus mechanism of POW and will generate 2.1billionAIT when the AICHAIN is 
+officially released. The initial token is generated by the ERC20 contract. It will be arranged 
+to replace the main chain token, after the main chain of AICHAIN is officially run.
+  AITs for investors are generated at once and will be distributed to investors based on private sales.
+ The remaining part of AITs will be retained by the AICHAIN Foundation and be released only upon 
+project implementation. Any such AIT release will be published within 5 working days.
+ After AICHAIN main chain launches, the released the ERC20 tokens will be gradually replaced by main 
+chain tokens. The rest will be frozen and destroyed forever.ProportionDistribution 
+planQuota                   
+(in Million AITs)Allocation details
+30%Private Sale: 
+Round A630Soft Cap: 9% of total AIT            
+Unfilled part will be rolled to round B
+16%Private Sale: 
+Round B336Will be released based on future 
+funding needs. The AIT price in 
+round B will be higher than round 
+A. The exact price will depend on the 
+situation.
+30% Foundation 63010% for application expansion
+10% of community management
+10% of talents and equipment
+9%Founders and 
+Developers189Will be gradually leased during 9 
+years with 1% each year
+15%Reserve for 
+Mining315The reserved tokens will produce by 
+AIT miner after the main chain is 
+officially run AIT
+4�2 Distribution plan of AIT4�1 Introduction of AIT
+The specific details of AITs allocation as shown in the following tableAICHAIN 
+Whitepaper20
+AICHAIN4�3 AIT Issuing
+Private sale – round A arrangement
+VIPUS & Canada EST     9:00am Jan.9th,2018    ~ 9:00am Jan.11th,2018
+GMT                            2:00pm Jan.9th, 2018   ~ 2:00pm Jan.11th, 2018
+Beijing Time             10:00pm Jan.9th, 2018 ~ 10:00pm Jan.11th, 2018
+Other qualified 
+investorsUS & Canada EST    11:00am Jan.9th, 2018    ~ 11:00am Jan.31st, 2018
+GMT                           4:00pm Jan.11th, 2018    ~ 4:00pm Jan.31st, 2018
+Beijing Time            00:00am Jan.12th, 2018  ~ 00:00am Feb.1st, 2018
+Total AITs for 
+Round A630,000,000 AIT (30% of total AIT)
+Soft Cap 189,000,000 AIT
+Hard Cap 630,000,000 AIT
+Qualified Investor 5 BTC or equivalent of ETH/BCH/EOS
+VIP 10 BTC or equivalent of ETH/BCH/EOS
+Upper Purchase 
+LimitNone
+AIT Releasing 
+TimeAround 5 working days after the private sale. For the exact schedule, 
+please refer to official announcementAICHAIN 
+Whitepaper21
+AICHAINExchange Rate
+To be on the exchangeThe AICHAIN foundation will accept BTC, ETH, BCH,and EOS to exchange for AITs 
+at this round. The exchange rate is based on the market price of BTC, ETH, BCH, and 
+EOS on Coinmarket cap onJan.9th, 2018 at USA & Canada EST: 9:00am. For the detailed 
+information, please refer to the official announcement. VIPs have the option to purchase 
+AIT with 20% off and 1month lock-in-period, starting from the date when AIT is launched 
+on exchange.
+1 BTC 196,060 AIT
+1 ETH 16,060 AIT
+1 BCH 31,520 AIT
+1 EOS 120 AIT
+AITs is scheduled to be on exchange in February 2018. For details, please refer to the 
+official announcement.  AICHAIN 
+Whitepaper22
+AICHAIN AICHAIN Foundation
+5�1 Establishment of the foundation
+5�2 Governance principleThe AICHAIN Foundation (or called 
+“Foundation” in the following paper) is 
+a non-profit organization established in 
+Singapore. The Foundation will act as 
+AICHAIN’s sponsor entity, who committed 
+to support AICHAIN’s development, 
+construction and governance, trans -
+parency, advocacy, and promotion 
+work, as well as promoting the safety 
+and harmonious development of the 
+community.The AICHAIN team commissioned a 
+trusted third party organization to 
+assist the team in setting up foundation 
+entities in Singapore and to maintain the 
+day-to-day operations as well as reporting 
+the entity architecture. After establishing 
+the Foundation, it selects the appropriate 
+members of the community to join the 
+functional Committee of the Foundation to 
+participate in the actual management and 
+decision-making.
+The design objective of the AICHAIN 
+Foundation governance structure mainly 
+focused on the sustainability of AICHAIN 
+platform, the effectiveness of the strategy formulation, the management effective -
+ness, the risk control and the efficient 
+operation of the platform economy.
+Although there are arguments advocating 
+that Blockchain is a de-centralized or 
+distributed self-governance community 
+system. We believe that the absolute de-cen -
+tralized may bring the absolute “fairness” 
+but more likely to be further “inefficient”. 
+Therefore, the core idea of the Foundation is to absorb the concept of in the management 
+structure of central governance, including 
+the highest decision-making authority 
+strategic Committee and major issues of 
+the centralized procedure to improve the 
+efficiency of the whole operation of the 
+community.5�2�1 The combination of centralized governance and distributed 
+architectureAICHAIN 
+Whitepaper23
+AICHAINThe function of Committee and functional 
+units coexist in the Foundation for daily 
+affairs, which will set up permanent 
+functional units, such as R&D department, 
+marketing department, operation 
+department, financial and human 
+resources departments to handle daily 
+affairs.
+At the same time, a functional Committee is 
+set up to make decisions on the important 
+functions of the Foundation. Unlike the 
+functional units, functional Committees exist in a virtual architecture where 
+members of the Committee can be from 
+any place of the world and do not have to 
+work full-time. However, it must meet the 
+requirements of the Committee’s expert 
+qualifications and be able to undertake 
+to present and make comments when 
+the Committee is required to present. 
+The functional Committee will also set 
+up a regular meeting system to ensure 
+the effective promotion of major deci -
+sion-making matters.5�2�2 The function of Committee and functional units coexist
+The risk management will be the most 
+important element in the process of 
+studying the strategic development of 
+AICHAIN. As a computer technology 
+with great on-going revolutionary, the 
+development of Blockchain is still in its 
+infancy, so it is very important to grasp 
+its development trend. The principle of risk management, when making sure the 
+Foundation makes important decisions, 
+takes full account of the risk factors, the 
+possibility and influence of its occurrence, 
+and makes corresponding countermea -
+sures through decision-making. Thus, the 
+development and iteration of the AICHAIN 
+is on the right path.
+From the creation of the AICHAIN, it always 
+adhere to the close integration with the 
+business as its purpose. The Foundation 
+also follows this objective. Even if the 
+Foundation will present as a non-profit 
+organization, but the Foundation wants 
+to get the maximum possible recognition 
+of the business world. To get the business 
+application of revenue, feedback to the Foundation and the community, while 
+further promoting the Foundation as 
+well as the development and upgrade of 
+AICHAIN. The Foundation also takes full 
+account of this principle in the selection 
+of talent and its architecture. It focuses on 
+attracting experts with technical expertise, 
+including industry experts who have a 
+deep understanding of business.5�2�3 Risk oriented governance principles
+5�2�4 Technology and Commerce CoexistingAICHAIN 
+Whitepaper24
+AICHAINReferring to the governance experience 
+of the traditional commercial world, 
+AICHAIN Foundation also intends to set 
+up special monitoring and reporting 
+channels (Whistle-Blower). Designated 
+by the strategic decision Committee as a 
+window and we welcome the community 
+participants to join in the management, 
+supervision and the operation of Whistle-
+Blower channel. Those include, but are not 
+limited to, new breakthroughs or recom -
+mendations that have significant implica -
+tions for the Foundation or the Blockchain 
+technologies, community operations issues, 
+crisis information and fraud reporting or fraud, etc.
+The Foundation will publish a unified 
+information collection window, while 
+ensuring the privacy of the information 
+collected. At the same time, the Foundation 
+publish periodic reports and irregular 
+news releases in the form of community 
+participation in all parties to disclose the 
+Foundation operation and development of 
+AICHAIN. Meanwhile, the main contacts 
+of the Foundation management will be 
+fully open, and accept the supervision and 
+liaison of the participants.5�2�5 Transparency and supervisionAICHAIN 
+Whitepaper25
+AICHAIN5�3 AICHAIN governance model
+The organizational structure of AICHAIN 
+Foundation raised a combination of 
+Specialized Committee and functional 
+departments, which will deal with daily 
+work and special matters. This section will 
+discuss the functions of the functional 
+Committees of the Foundation as well 
+as the functions of the major functional 
+departments. With the reference to the operation of 
+traditional entities, the Foundation will set 
+up functional Committees, including the 
+Strategic Steering Committee, the technical 
+audit Committee, the remuneration and 
+Nomination Committee and the public 
+relations Committee.
+The Strategic Steering Committee is on the 
+top of the Committee. The main objective 
+is to provide guidance to the AICHAIN 
+community and lead the community 
+development. The committee’s responsi -
+bility includes but are not limited to:
+(1) Modifying governance structure of the 
+Foundation. 
+(2) The formation and rotation resolution of 
+the Strategic Steering Committee. (3) The appointment and rotation resolution 
+of the Secretary General of the Foundation. 
+(4) The appointment and dismiss of the 
+chief executive and the head of each 
+functional Committee. 
+(5) Foundation review and amendment of 
+the constitution. 
+(6) The strategic decision of AICHAIN 
+development. Figure 4.3 AICHAIN functional Committee structure graphic
+Strategic Steering CommitteeAICHAIN 
+Whitepaper26
+AICHAIN(7) AICHAIN’s core technology changes and 
+upgrades. 
+(8) Emergency decisions and crisis 
+management agendas. 
+The members of the strategic Committee 
+and the president of the Foundation will 
+serve for two years and the chairman of 
+the fund shall not be reappointed for more 
+than two sessions.
+At the end of the tenure of Strategic 
+Steering committee members, the 
+community will vote 50 representatives, 
+and then 6 out of the 50 will be voted to 
+be the core members of the new Strategic 
+Committee. The core members shall agree 
+be investigated during their tenures and to 
+disclose their compensation package.  
+Important matters need to be decided by 
+the decision Committee with an open vote. 
+Each member of the Strategic Steering Committee has one vote, and the chairman 
+of the Foundation has two votes. Decisions 
+made by the decision Committee must be 
+approved by more than half of all members 
+of the Committee.
+In addition, the person in charge shall 
+convene the decision Committee to hold an 
+interim meeting within 5 working days at 
+the time of the following circumstances:
+          The General Secretary of the 
+Foundation considers when it is necessary.
+          More than 1/3 of the decision 
+Committee members jointly proposed.
+The Strategic Sheering Committee meetings 
+shall be attended by the members of 
+the Committee. If members are unable 
+to attend, they may entrust the other 
+members of the Committee in writing. 
+Failing to delegate is deemed to have given 
+up the right to vote at the meeting.
+The general secretary is the highest 
+responsible person of AICHAIN admin -
+istration. The responsibility is to make 
+guidance and coordinate the daily 
+operation of Foundation, technology 
+development, community maintenance and public relations, as well as connecting 
+various business unit with the governance 
+structure of the functional Committee. The 
+Secretary General will regularly report to 
+the Strategic Steering Committee.
+The Technical Audit Committee comprises 
+the core AICHAIN technology developers, 
+who are responsible for the technology research, development direction of 
+Blockchain, the underlying technology 
+development, open port development and General Secretary
+Technical Audit CommitteeAICHAIN 
+Whitepaper27
+AICHAINThe remuneration and Nomination 
+Committee is responsible for determining 
+the selection and appointment of key 
+managers of the Foundation. The 
+Committee shall establish rules of 
+procedure, assess the competence of 
+the management, and authorize the 
+appointment. At the same time, the 
+Committee sets up a compensation system to encourage people who have important 
+contributions to the Foundation.
+The remuneration and Nomination 
+Committee regularly reviews the 
+performance of all the Foundation staff, 
+advice on the human resource structure 
+and raise different incentive measures to 
+attract talented experts.
+The public relationship center is to serve 
+the community and responsible for 
+marketing campaign and promotions of 
+NetpuneAI platform, products, and other 
+related matters. Besides, the center is also responsible for public announcement 
+management. If there is any event which 
+affects the reputation of the foundation, 
+the committee shall conduct a PR response 
+after an internal evaluation.Remuneration and Nomination Committee
+Public Relation Committee
+Supervisory Committee
+As a highly independent and autonomous 
+form, the Supervisory Committee is set up 
+inside the Foundation as an independent 
+risk control for the overall operation 
+of the Foundation. The Supervisory 
+Committee conducts day-to-day guidance 
+of the Foundation’s legal and compliance 
+departments. At the same time, the 
+Foundation will set up a mechanism for 
+reporting transparency and supervision 
+to receive internal and external reporting issues, take corresponding improvement 
+investigation and treatment, ensure 
+that the Foundation operation perfectly 
+complies with laws and regulations, and 
+monitor foundation’s overall risk. 
+The commission reports directly to the 
+Committee on strategic decisions and does 
+not have any conflicts or overlaps with 
+other functions of the Foundation.review, technology development and patent 
+examination.
+In addition, members of the Technical 
+Audit Committee regularly learn the dynamics and hotspots of the community 
+and industry, communicate with partici -
+pants in the community, and hold technical 
+seminars on a regular basis.AICHAIN 
+Whitepaper28
+AICHAIN5�4 AICHAIN human resource management
+AICHAIN is committed to creating the 
+world’s most influential open source 
+community ecology. To ensure the smooth 
+development of the technology and the 
+continuity of the Foundation operation, the Foundation will focus on recruiting 
+excellent technology developers and 
+managers with deep understandings of the 
+business.
+Based on the characteristics of “Blockchain 
+without borders”, the Foundation welcome 
+talented people from all over the world 
+to join the Foundation. In addition 
+to the individual posts that must be 
+recruited locally (e.g., logistics managers), 
+recruitment is not limited to the place 
+of work or the form of work. AICHAIN 
+Foundation will, at the same time, follow 
+the best practices in human resource 
+management, develop appropriate human 
+resources plans, recruitment procedures and review procedures to ensure that 
+Foundations attract the right people. 
+As an open source community, AICHAIN 
+will not only recruit full-time developers, 
+but also employ well-known industry 
+technical adviser. Relevant hiring and 
+salary payment is required for discussion 
+and decision, and signed the terms 
+of cooperation by remuneration and 
+Nomination Committee.5�4�1 Talent Recruitment
+5�4�2 Performance Appraisal
+AICHAIN will do the performance 
+appraisal based on commercial company’s 
+best practice that comprehensively consider technology development, business 
+expansion effect, economic operation, 
+fund risk control management etc. The Other Functional Department
+The Foundation refers to enterprise 
+system framework and sets up day-to-day 
+operations such as human resources, 
+administration, finance, marketing, 
+research and development (or laboratory) 
+units, etc.The functional departments maintain 
+the normal operation of the AICHAIN 
+Foundation, and directly deal with the 
+relevant parties in the commercial society, 
+such as enterprise customers, suppliers, 
+regulators and the three party service 
+organizations.AICHAIN 
+Whitepaper29
+AICHAIN5�5 Risk assessment and decision making mechanism of AIC -
+HAIN foundation
+5�6 AICHAIN foundation economyAs an innovative technology, Blockchain 
+is not only a disruptive breakthrough 
+in computer core technology, but also a 
+challenge to the traditional commercial 
+society. Therefore, the importance of risk 
+management system is self-evident. The 
+AICHAIN Foundation is committed to build 
+a risk oriented sustainable chain of block 
+communities. It will continue to operate 
+risk management of the foundation which 
+includes the establishment of risk system, 
+risk assessment, risk response and a series of activities.
+For major risks, the strategic decision 
+Committee will discuss and make 
+decisions. It will classify risks based on 
+event characteristics, such as event impact, 
+extent of impact, probability of tokens and 
+probability of occurrence, and decisions 
+based on priority. For priority events, the 
+relevant Committees of the foundation shall 
+be organized as soon as possible.
+In its economic operations, the Foundation 
+promotes the following major principles:
+(1) Take the nonprofit as the main principle, 
+and give back to the community;
+(2) Sustainable development 
+(3) Collaboration and sharing of resources
+Financially, the Foundation will seek the 
+financial balance between expanding and 
+community development. In addition to 
+the initial funding received during the 
+ICO, the Foundation will be able to obtain digital asset income through community 
+eco operations. Under the arrangement 
+of the third party trust institution, it 
+will be transparent to distribute all the 
+benefits to all operations and community 
+development. 
+The Foundation will set up a full-time 
+financial management team to maintain its 
+financial and digital assets. The financial 
+management team reports directly to 
+the strategic decision Committee, and 
+regularly prepare the financial reports and 
+disclosures of the Foundation.performance appraisal award will be 
+submitted to the remuneration and 
+Nomination Committee and the Strategic Decision Committee for review, and an opti -
+mization plan shall be worked out.AICHAIN 
+Whitepaper30
+AICHAIN5�6�2 Financial Planning and Implementation Reports 
+5�6�3 Digital Asset Management
+5�6�4 Digital wallet managementEach quarter, the financial and personnel 
+management Committee prepare the 
+financial planning and summarize the 
+last quarter financial performance. The formation of financial reports will 
+be submitted to the Strategic Steering 
+Committee for approval.
+The digital assets belonging to the 
+Foundation are appointed by the strategic 
+decision Committee, and the full-time 
+financial personnel are responsible for the 
+arrangement. Digital assets and transaction 
+currency are arranged independently and 
+timely financial accounting. Following the best practices of financial control, the 
+Foundation adopts multiple signatures 
+to ensure the safety and accuracy of the 
+assets. All the collected coins will be the 
+timely transfer of digital assets and digital 
+wallet. Foundation assets are not deposited 
+in individual accounts.
+Based on the principle of independence, 
+AICHAIN Foundation’s wallet adopts 4/7 
+multi signature. Added Signature is subject 
+to the approval of the Strategic Steering Committee. Majority of tokens will be cold 
+saved, and the remaining will be used 
+through multiple signatures.5�6�1Fund Use Restriction
+The use of AICHAIN assets is in line with 
+the principles of openness and transpar -
+ency. According to the principle of distri -
+bution and budget, AICHAIN will set up a 
+separate account and digital asset wallet 
+address used by depository institutions to 
+digital assets supervision and regularly 
+share to the community. 
+The principle of the use of revenue from the public sale:
+         Exceeding the value of 1 million 
+yuan (or equivalent digital assets) requires 
+approval by the head of the financial unit 
+and the Secretary General.
+          Over 5 million yuan (or equivalent 
+digital assets) will need to be approved by 
+the Strategic Steering Committee.AICHAIN 
+Whitepaper31
+AICHAIN5�6�5 Disclosure matters
+Each year, the Foundation will inform 
+the community of AICHAIN development, 
+operations, business promotion and the 
+Foundation’s operations. To disclose 
+the financial health of the Foundation, 
+unaudited quarterly and audited annual 
+financial reports will be released. Meanwhile, the Public Relations 
+Committee, which serves as an external 
+window, will hold regular and irregular 
+meetings and releases material matters to 
+the public.AICHAIN 
+Whitepaper32
+AICHAIN
+AICHAIN Team is formed by elites from AI, internet and blockchain fields, including world 
+renowned scholars from top universities such as Harvard, UCLA, and Qinghua. 
+The Core team members of AICHAIN is shown as following: AICHAIN Team
+6�1 Core team members
+Master in Electronic Engineering of Hua Zhong 
+University of Science and Technology. Mr. Duan is the 
+former CTO of Beijing Bitmain Technololy Co., Ltd and 
+was responsible for developing and managing mining 
+software and cross platform mining algorithm for 
+Bitcoin, ETH, and other cryptocurrencies. Over 
+the past 4 years, Mr. Duan has accumulated rich 
+industrial experience in the technical structure of 
+virtual digital currency wallets and exchanges. 
+Mr.Duan responsible for the AICHAIN architec -
+ture design and development team management, 
+including the design of the third party application 
+implemented with the AICHAIN.
+Stephen Huntsman is experienced in world 
+diplomacy, trans-media, technology & natural prod -
+ucts-wellness industries. He has spent a lifetime and 
+enjoys respect with family ambassadorial relations 
+and associations with world-class individuals, 
+celebrities, companies, Olympians and acclaimed 
+professionals, world dignitaries and high-ranking 
+government officials. Stephen has extensive and 
+intimate Government-Business relations inter -
+nationally with focus on Asia and is well known Stephen , HuntsmanKai , DuanAICHAIN 
+Whitepaper33
+AICHAIN
+Since the mid-2000s, Justice pioneered the world of 
+branded content with Cobrasnake Marketing working with 
+T -Mobile, RVCA, Paramount Pictures, BCBG and countless 
+more. In 2013 he began learning blockchain technology. 
+His in uencer-marketing agency Strange Arcade pioneered 
+in uencer powered marketing before the invention of 
+Mobile social media. He has worked with some of the 
+biggest names of our generation, including J.J. Abrams, 
+Katy Perry, and Lady Gaga (to name a few). Throughout his 
+career, he has used technology to reshape media norms. 
+His visionary insight has inspired a product that’s both 
+inclusive and elegant. 
+Mr. Justice is responsible for the industry and the corre -
+sponding market management of AICHAIN overseas 
+intelligent marketing.Justice, Laubas a multi-generational “Friend of China”, expert 
+facilitator, commodities partner and humanitarian. 
+Stephen’s activities include vibrant healthy consump -
+tions, in-line skating, Qigong and Yoga by the Ocean 
+surf energy. As a student of Mandarin & Confucius, 
+private pilots license is on the list as well. As an epic 
+wellness & unity consciousness lifestyle eco-pre -
+neuer, reform in health-care and currency remain 
+paramount issues that Stephen supports wholeheart -
+edly. In recent years Stephen also became a well 
+versed entrepreneur in crypto assets, trading and an 
+activist for disruptive technologies.
+Mr. Stephen joins AICHAIN with real AI applications, 
+and will also bring more AI cooperation opportuni -
+ties for AICHAIN in the future market expansion.AICHAIN 
+Whitepaper34
+AICHAIN
+Ph.D. of the University of California Los Angeles 
+Department of Mathematics, master and bachelor of 
+University of Science and Technology of China. Currently, 
+Dr. Yan is an Assistant Professor of Computational 
+Mathematics and Engineering at the University of 
+Michigan. Prior to that, he served as an Assistant Professor 
+in the Department of Mathematics at the University 
+of California. Dr. Yan’s research focuses on large data 
+parallel computing and distributed algorithm optimiza -
+tion, and has extensive research experience in blockchain, 
+cryptography, and data mining. 
+Dr. Yan will provide depth algorithm support for AICHAIN 
+in the core mathematical model of block chain, core 
+algorithm of artificial intelligence, and parallel computing 
+of large data.Dr� Ming, Yan
+Gabriel Nones-Newman is well-versed in GPGPU 
+computing, networking, machine learning, and 
+blockchain applications.He has good technical level and 
+practical experience in mining, regulation and innovative 
+technology application.
+Gabriel has once held senior positions including CTO, 
+project managers and IT executives in the world’s top IT 
+company.He is the founder of Hephaestus Project which 
+leverages VR/AR, FinTech, Green Energy Tech, and A.I to 
+provide UBI/UBL.
+Gabriel is responible for the   design and development of 
+the blockchain software of AICHAIN, and play a key role in 
+the rapid development of AICHAIN.Gabriel Nones-NewmanAICHAIN 
+Whitepaper35
+AICHAIN
+Ph.D. of the University of California. Bachelor and 
+Master of Tsinghua University. Dr.zou worked in Alex 
+network, Microsoft Asia Research Institute, and some 
+were successful acquisition or listing of start-ups 
+or part-time on the non CPU network architecture, 
+heterogeneous computing (such as GPU and FPGA), 
+load optimization fields of research and Application 
+on the block depth. Chain based digital currency 
+and its chip design optimization, have a deep under -
+standing of the transaction algorithm hardware.
+Dr. Zou is responsible for the design and optimiza -
+tion of the chip design of the AICHAIN block chain 
+direction digital money miner.Dr� Yi,Zou
+Ph.D. in Aeronautics and Electronic Information 
+Engineering of Beijing University. Mr. Zhang 
+previously worked in Datang Telecom Group, 
+responsible for robot vision navigation and 
+man-machine vision interaction system design. He 
+has extensive experience in narrowband Internet of 
+Things, visual arti cial intelligence and blockchain. 
+Dr. Zhang is responsible for the design of the 
+AICHAIN visual artificial intelligence interactive 
+system. Dr. RuMin，ZhangAICHAIN 
+Whitepaper36
+AICHAIN
+Ph.D. and Master in Electronic Engineering and 
+Computer Science of University of Ottawa, Canada, 
+and bachelor of Wu Han University, China. Dr. Wang 
+previously worked as an assistant researcher at 
+the University of Ottawa and his research involved 
+data mining, arti cial intelligence, and algorithm 
+optimization. 
+Dr. Wang is responsible for the construction and 
+optimization of the AICHAIN artificial intelligence 
+algorithm. Dr� WengYi , Wang
+Ph.D. in Electronic Engineering of Tsinghua 
+University, Former employee of Microsoft Research 
+Asia and Agilent, Lead the development of multiple 
+intelligent transportation and image recognition 
+products. Has more than 10 years of research and 
+industry experience in arti cial intelligence.  
+Dr. Jia is responsible for the research and 
+development of AICHAIN artificial intelligence image 
+and video products.Dr � HuiXing,Jia
+Master of Sophia University (USA), with more 
+than 10 years of experience in Internet operations 
+management, marketing, brand PR, and Digital 
+Marketing project planning. 
+EasyAI CMO. Took charge of EasyAI marketing 
+planning, brand promotion and product promotion. 
+Focused on the application of AI interaction. 
+Ning, YuAICHAIN 
+Whitepaper37
+AICHAIN
+Ph.D. in Electronic Engineering of Tsinghua 
+University, postdoctoral fellow at the University of 
+California, Los Angeles, visiting scholar at Harvard 
+University, senior member of the IEEE, distin- 
+guished professor of the National “Youth Thousand 
+Talents Program”, and PhD supervisor of the Virtual 
+Intelligence Center of University of Electronic Science 
+and Technology of China, and the board director of 
+EasyAI. Dr. Chen’s has more than 15 years of industry 
+experience in the elds of computer vision, natural 
+language processing, deep learning algorithms, and 
+digital asset research. 
+ Dr. Chen provides an overall advisory service for 
+AICHAIN and helps AICHAIN provide strategic 
+support to the application of artificial intelligence to 
+the ground.Dr � JianWen,Chen
+6�2 Advisory TeamFormerly the director of WEIHOU Live. Created 
+the marketing department for WEIHOU Live. and 
+build the WEIHOU Live brand image and marketing 
+strategy from scratch. 
+Provided marketing consulting services for IBM, 
+Microsoft, Cisco and other Fortune 500 companies. 
+Ms. Ning is responsible for the overall marketing 
+promotion of AICHAIN.AICHAIN 
+Whitepaper38
+AICHAIN
+Professor of University of Electronic Science and 
+Technology of China, Chair Woman of ACM SIGAI CHINA, 
+Chief secretary of VALSE. Ph.D. in Electronic Engineering 
+of Queen Mary University of London, Bachelor, and 
+Master in Telecommunication and Information System of 
+Xidian University. Devoted to multimedia and computer 
+vision research. Lead and promote international organi- 
+zations in the areas of AI. Received couple of patents in 
+the area of AI. Published multiple articles in international 
+conferences and journals (JCR II and above). Hosted a 
+number of National Natural Science Foundation projects. 
+Received the the Best Report Award for the 10th ACM 
+International Internet of Things and Cloud Computing 
+Symposium in 2015. The summit chairman of ACM Turing 
+50-year China Arti cial Intelligence Grand Meeting. A guest 
+speaker of 2017 iWorld Digital World International Forum 
+hosted by IDG. Guest host of the Arti cial Intelligence 
+Frontier Summit Forum. Chairman of 2018 China Turing 
+Congress Industrial Liaison Committee. Received The 
+EXCELLENT ACM CHINA LECTURER AWARD and ACM 
+2017 OUTSTANDING CONTRIBUTION AWARD 
+ Professor Dong provides an advisory service to AICHAIN 
+in the direction of artificial intelligenceProfessor Le,DongAICHAIN 
+Whitepaper39
+AICHAINAICHAIN teamed up with the Medialab of University of 
+Electronic Science and Technology to establish Blockchain 
+Reseach Center. The center is aiming to facilitate the 
+development of the core technology algorithm of blockchain. 
+The center will focus on the applications of blockchain in the 
+areas of digital assets, financial clearing, Internet of Things, 
+information and date registration etc.6�3 Strategic partners
+Blockchain Research Center
+EasyAI
+EasyAI Tech. An artificial intelligence startup focused on 
+the core of intelligent interaction algorithms. At the same 
+time, with more than 40 of its core patented technology, the 
+successful construction of more than 10 million users of 
+visual interaction platform. Through the optimization of deep 
+learning in such aspects as intelligent interaction, emotion 
+perception, virtual character reconstruction and semantic 
+understanding, the accuracy and user experience of intelligent 
+interaction are greatly enhanced. Focusing on the core concept 
+of “people-oriented” and based on the core technology of 
+human intelligent interaction, “making artificial intelligence 
+become simpler” as the mission, we aim at “becoming the 
+leader of artificial intelligent interaction”.
+Chang Hong Electronic
+Founded in 1958, Changhong Electric is one of the oldest 
+enterprises in mainland China. Since 2003, Changhong Electric 
+has ranked No. 1 among the top 200 domestic enterprises in 
+terms of import/export value. Increasing its brand value to $4 
+billion in 2004, Changhong has become the most valuable brand 
+in China.
+Our rich portfolio of proprietary technologies covers desktop 
+DVD players, in-dash DVD players, high-definition DVD players, 
+portable DVD players, DVD and videocassette recorders, and AICHAIN 
+Whitepaper40
+AICHAIN
+Coolpad
+Coolpad Group Limited (the “Company”), formerly known as 
+China Wireless Technologies Limited, was incorporated in the 
+Cayman Islands as an exempted company with limited liability 
+on 11 June 2002. The shares of the Company (the “Shares”) were 
+listed on The Stock Exchange of Hong Kong Limited (the “Stock 
+Exchange”) on 9 December 2004 (Stock Code: 2369). Yulong 
+Computer Telecommunication Scientific (Shenzhen) Co., Ltd. 
+(“Yulong Shenzhen”) is an indirect wholly owned subsidiary 
+of the Company. It was founded by Mr. GUO Deying (the 
+Company’s chairman, executive director and chief executive 
+officer) in April 1993
+In the last decade, capitalizing on the development of wireless 
+telecommunications technological know-how in wireless tele -
+communications across multiple wireless telecommunications 
+network standards including TD-LTE, FDD-LTE, TD-SCDMA, 
+CDMA-EVDO, WCDMA, GSM, and CDMA1X networks, the 
+Company and its subsidiaries (collectively, the “Group”) have 
+developed a large number of proprietary technologies and 
+patents in mobile operating systems, radio frequency, protocols 
+and wireless data decomposed transmission technology, etc. 
+The Group has developed advanced research and development home theater systems. Our products are selling well in the US, 
+Europe, Russia, Australia and Southeast Asia.
+Changhong Electric is ISO 9001:2000 and ISO 14001 certified. 
+We were also qualified “inspection-free” by the State Bureau 
+of Quality and Technical Supervision in 2003. All our products 
+carry CE, FCC and UL marks.
+Using its expertise in circuit and software design, as well as 
+assembly and QC, Changhong produces more than 4 million A/V 
+products every year. We also provide OEM services. Contact us 
+today to learn more about the buyer benefits we can provide 
+you.AICHAIN 
+Whitepaper41
+AICHAIN
+capabilities in mobile communications and gradually becomes 
+a leader of 4G and 3G smartphone in the Mainland China’s tele -
+communications market.
+ Nowdays Coolpad is a global top 10 smartphone brand and sells 
+phone all over the world including Asia Pacific, India, Europe, 
+U.S.A etc.
+In September 2014, Shenzhen Institute of Beidou Applied 
+Technology(SIBAT, www.sibat.cn)is established by Shenzhen 
+institute of Advanced Technology Chinese Academy of Science 
+(SIAT)and government of Nanshan District, which is the first 
+Beidou satellite application technology research institute in 
+China. SIBAT is the pioneer of big data services in transport 
+field with the qualification of Independent legal personality. 
+What is more, SIAT holds a controlling number of the shares.
+Today, SIBAT has a well-developed and growing business. The 
+business mainly bases on the location services, which further 
+devotes to a broad range of research and development(R & D) 
+and industry innovation platform, including product R & D, 
+system integration and operation services. SIBAT also offers a 
+wide variety of professional services in the field of intelligent 
+transportation and smart city. Though our work, we make a 
+positive difference in our urban cities by means of several 
+application technologies, such as cloud computing, integrated 
+satellite navigation, mobile Internet, temporal and spatial 
+information, and intelligent sensing.Institute of Beidou Applied TechnologyAICHAIN 
+Whitepaper42
+AICHAIN
+National Business Daily was founded on December 9, 
+2004, and was approved by the State Press and Publication 
+Administration as a nationally-published daily for financial 
+affairs. It focuses on corporate news and investment wealth 
+management information, and reports on news, figures 
+and trends of global economic policies, corporate Industry, 
+capital markets, regional economy, business operations, 
+business management, professional investment and financial 
+management.
+It owns seven core products including newspapers, websites, 
+news clients, Weibo, WeChat, financial information products 
+and online promotion products. National Business Daily is 
+among the top three newspapers in the country in terms of 
+overall strength of newspapers. Each official Weibo accounts 
+reached more than 2800 million followers; each official WeChat 
+account and sub-segments of the professional financial WeChat 
+matrix has close to 2 million users.
+“Yi Zhibo” is a product of Shenzhen Cloud Gather Digital Co., 
+Ltd., and is a new generation of interactive social networking 
+platform. Its vision is to provide the most efficient way for 
+people to connect in a virtual environment. At present, “Easy 
+Live” APP is a mobile social product launched by its affiliated 
+company, which is a leading social interactive platform for 
+interactive, sharing and live video. Currently there are 30 
+million users and 3000 live streamers.National Business Daily
+Yi Zhibo
+AICHAIN 
+Whitepaper43
+AICHAINBa Dou Mao
+Ba Dou Mao applies the artificial intelligence technology 
+to  headhunter and resolves the problems of the headhunter 
+through advanced technologies such as OCR, speech recognition 
+(ASR), speech synthesis (TTS), natural language understanding 
+(NLU), machine learning. Ba Dou Mao can intelligently dialogue 
+pain points, greatly improving the recruitment efficiency and 
+matching accuracy. Moreover, Ba Dou Mao can provide services 
+such as resume optimization, job recommendation, job search 
+consulting and so on, basing big data and AI analysis result 
+from the information such as user needs, required salaries, 
+industry reports and career planning.
+Bingotalk is an online education company dedicated to 
+children’s English founded by a group of outstanding Chinese 
+from prestigious American schools to realize the dream of 
+“helping 200 million Chinese children connect with the world.”
+Bingotalk “to make every Chinese child can teach English” as 
+its purpose, to promote China’s civilian education of children 
+online English responsibility. The platform provides “three 
+free”: “free platform, free agent,  free barrier of communica -
+tion” and “three have”:  “have Foreign teacher qualification 
+examination system, have the curriculum consultant tracking 
+service, have multi-teaching mode “. The goal of such “ three 
+free and three have “online education model is to achieve a 
+triple-win situation where parents spend less, foreign teachers 
+make more money and children dare to speak English.
+HuoYan Financial is a financial science and technology 
+enterprise co-founded by the National Business Daily and 
+Sichuan Miracle Group under the background of supply-side 
+reform and the reorganization of state-owned enterprises. 
+Huoyan Financials integrates the most high-quality financial 
+Bingotalk
+HuoYan FinancialsAICHAIN 
+Whitepaper44
+AICHAIN
+media and cloud computing resources and vigorously develops 
+the three core businesses of “All Media”, “Financial Consulting” 
+and “Financial SaaS”, aiming to build a leading financial 
+science and technology enterprise in China and provide 
+services to enterprises, brokers, banks , funds and other 
+investors in the capital markets.
+San Qian Ke is an intelligent marketing platform powered 
+by the technologies of mobile internet, artificial intelligence, 
+Internet of Things, big data and cloud computin. San Qian Ke is 
+committed to providing enterprises with one-stop online smart 
+marketing solution, including marketing technology, products, 
+resources and service innovation. The clients of San Qian Ke 
+are from multiple industries, including the financial, education, 
+tourism, automotive, e-commerce and other industries. San 
+Qian Ke has served and established long-term relationsihip 
+with organizations and intuitions such as Bank of China, 
+JUMEE, Everbright Securities and Yun Xue Tang.
+Chuan Huo Live is based on the specialized market of  “live 
+broadcast + food” , “live broadcast + E-commerce”, “live 
+broadcast + travel”, “live broadcast + culture” and other 
+different areas. The platform gathers internet influencers, 
+creates live channels, expands the influenser’s group, thus to 
+promote live broadcast culture.
+Miracle VR is based on the VR technology to show users 
+multi-dimensional VR live contents, including large-scale 
+activities, scenic view, TV programs, sports events and the in 
+360 ° panoramic view, allowing users to easily watch videos on 
+the PC and mobile devices panoramic VR content.San Qian Ke
+Chuan Huo Live
+Miracle VRAICHAIN 
+Whitepaper45
+AICHAINSichuan Miracle Media Co., Ltd. is a new generation of 
+cross-media intelligent integrated media service provider that 
+founded on the cloud. It is a company that jointly established 
+by Chengdu Media Group and Sichuan Miracle Group. It is 
+committed to promoting the integration of national media and 
+the expansion of new media industry.
+Based on the great content resources and brand advantages of 
+Chengdu Media Group as well as the leading artificial intelli -
+gence technology advantage of Sichuan Miracle Group, Miracle 
+Media has integrated new media industry chain resources such 
+as content, technology, channel, operation and license to build 
+a leading industry “Video Cloud Computing” and “Big Data 
+Intelligence” product innovation platform.
+At the same time, Miracle Media also built a diversified media 
+service system including media platform solutions, HD / 
+VR broadcast solutions, cloud media platform solutions and 
+Internet TV media solutions.
+SceneryFish predecessor is a company that focuses on the 
+forefront of tourism industry research and development. It’s 
+a leader of the full tourism-service chain and innovative. 
+It provides “planning lead, operation support, marketing 
+planning, wisdom travel construction, investment operation” 
+that one-stop solution.
+SceneryFish dedicated to “cultivate all aspects of tourism, to 
+implement Internet science and technology, service tourism 
+industry chain”, and bring together the industry’s top experts 
+wisdom. From the professional perspective, through the 
+patented technology, innovative thinking and commitment to 
+promote the planning, marketing and technology applications 
+level of the tourism industry.
+Miracle media
+SceneryFishAICHAIN 
+Whitepaper46
+AICHAINIn addition, Sichuan Province also relies on the technical 
+advantages that formed by the “Media and Vision Research 
+Center” that jointly established by Harvard University and 
+the University of Electronic Science and Technology to work 
+with the state “Artificial Intelligence Industry Technology 
+Innovation Alliance (AVS)”. Through the corporation to actively 
+promote the establishment of “China VR Standard “.
+Game matrix
+Li Guangman Bingdian CommetGame Matrix” is the industry’s leading game developer. It has 
+four plates which are games live (game anchor, video games, 
+etc.), eSports events (college eSports, pro gaming), game studios 
+(game demos, virtual Trading platform) and board games 
+(Landlords, Mahjong, online doll machine, etc.). It can provide 
+customers with the game development technology, game 
+services, platform structures and other aspects of the solution.
+“Li Guangman Bingdian Comment” is a well-known current 
+affairs commentary Wechat account. Based on the original 
+articles of Li Guangman, it builds a team of high-quality 
+original article authors and builds a self-media platform 
+for high-end current affairs commentary in China’s most 
+influential political, economic, military and social sectors. It is 
+committed to create a public platform for self-media matrixes 
+and forming a platform for current affairs commentary in 
+various professional aspects such as political commentary, 
+military commentary, economic commentary, social 
+commentary and cultural commentary, forming a multi-faceted 
+social influence.
+“Li Guangman Bingdian Comment” has dozens of 100,000 + 
+reading volume articles, for a single article the reading volume 
+up to 50 million. The average reading volume of an article is 
+more than 50,000, the subscribers are more than 100,000, and 
+the original article can be released on major websites and other 
+Wechat public account.AICHAIN 
+Whitepaper47
+AICHAINThe AICHAIN Foundation does not make, 
+and hereby disclaims, any representation 
+or warranty with respect to AICHAIN or 
+AICHAIN Token (such as merchantability 
+or fitness for particular purposes), except 
+those expressly specified herein. Each 
+purchaser’s decision to participate in the 
+AICHAIN Token crowdsale and purchase 
+any AICHAIN Token shall be made based 
+on his/her own knowledge of AICHAIN 
+and AICHAIN Token and the information 
+disclosed in this Whitepaper. Without 
+prejudice to the generality of the foregoing, 
+each purchaser will, upon the launch of 
+AICHAIN, accept AICHAIN Token on an “as 
+is” basis, irrespective of the technical spec -
+ifications, parameters, performance or 
+function thereof. 
+The AICHAIN Foundation hereby expressly 
+disclaims its liability, and shall in no case 
+be liable to any person, for: 
+1) Any person’s purchase of AICHAIN Token 
+in violation of any anti-money laundering, 
+counter-terrorism financing or other 
+regulatory requirements that are imposed 
+in any jurisdiction; 
+2) Any person’s purchase of AICHAIN 
+Token in violation of any representa -
+tion, warranty, obligation, covenant or 
+other provision under this Whitepaper, 
+and the resulting failure or inability to 
+make his/her payment or to claim relevant purchased AICHAIN Token; 
+3) Early termination of the AICHAIN Token 
+crowdsale for any reason; 
+4) Failure or abortion of AICHAIN 
+development and resulting failure to 
+deliver AICHAIN Token; 
+5) Delay or rescheduling of AICHAIN 
+development and resulting failure to meet 
+any anticipated milestone; 
+6) Any error, bug, flaw, defect or otherwise 
+of the source code of AICHAIN; 
+7) Any malfunction, breakdown, collapse, 
+rollback or hardforking of AICHAIN or the 
+blockchain of Ethereum if AIT is initially 
+issued on ERC20.
+8) Failure of AICHAIN or AICHAIN Token to 
+meet any specific purpose, or unfitness for 
+any specific use; 
+9) Utilization of the proceeds raised 
+through the AICHAIN Token crowdsale; 
+10) Failure to timely and completely 
+disclose any information relating to the 
+development of AICHAIN; 
+11) Any purchaser’s divulgence, loss or 
+destruction of the private key of his/her 
+crypto-currency or crypto-token wallet  Disclaimer of Liability and Risk FactorsAICHAIN 
+Whitepaper48
+AICHAIN(inter alia, the private key of the AICHAIN 
+wallet used by that purchaser); 
+12) any default, breach, infringement, 
+breakdown, collapse, service suspension 
+or interruption, fraud, mishandling, 
+misconduct, malpractice, negligence, 
+bankruptcy, insolvency, dissolution or 
+winding-up of any third party crowd -
+funding portal of AICHAIN Token; 
+13) Any difference, conflict or contradic -
+tion between this Whitepaper and an 
+agreement between any purchaser and any 
+third party crowdfunding portal; 
+14) Trading or speculation of AICHAIN 
+Token by any person; 15) Listing or delisting of AICHAIN Token 
+on or from any exchange; 
+16) AICHAIN Token being classified or 
+treated by any government, quasi-govern -
+ment, authority or public body as a kind 
+of currency, securities, commercial paper, 
+negotiable instrument, investment or 
+otherwise that may be banned, regulated or 
+subject to certain legal restrictions; 
+17) Any risk factors disclosed in this 
+Whitepaper and any damage, loss, claim, 
+liability, punishment, cost or other adverse 
+impact that is caused by, associated with, 
+in connection with, incidental to or conse -
+quential to that risk factor.
+The AICHAIN Foundation believes that 
+there are numerous risks involved in the 
+development, maintenance and running of 
+AICHAIN, many of which are beyond the 
+control of the AICHAIN Foundation. Each 
+AICHAIN Token purchaser should peruse, 
+comprehend and consider carefully the 
+risks described below in addition to the 
+other information stated herein before 
+deciding to participate in the AICHAIN 
+Token crowdsale campaign. 
+Each AICHAIN Token purchaser should pay 
+particular attention to the fact that, while 
+the AICHAIN Foundation is established in 
+the Republic of Singapore, AICHAIN and AICHAIN Token lie in cyberspace only 
+without physical presence and hence do 
+not fall within or pertain to any specific 
+jurisdiction. 
+Participating in the AICHAIN Token 
+crowdsale campaign shall be an action 
+based upon prudent decision and will be 
+deemed as the relevant AICHAIN Token 
+purchaser having been fully aware of and 
+agreed to take all the risks below.
+The AICHAIN Foundation believes that 
+there are numerous risks involved in the 
+development, maintenance and running of 
+AICHAIN, many of which are beyond the Risk FactorsAICHAIN 
+Whitepaper49
+AICHAINcontrol of the AICHAIN Foundation. Each 
+AICHAIN Token purchaser should peruse, 
+comprehend and consider carefully the 
+risks described below in addition to the 
+other information stated herein before 
+deciding to participate in the AICHAIN 
+Token crowdsale campaign. 
+Each AICHAIN Token purchaser should pay 
+particular attention to the fact that, while 
+the AICHAIN Foundation is established in 
+the Republic of Singapore, AICHAIN and 
+AICHAIN Token lie in cyberspace only 
+without physical presence and hence do 
+not fall within or pertain to any specific 
+jurisdiction. 
+Participating in the AICHAIN Token 
+crowdsale campaign shall be an action 
+based upon prudent decision and will be 
+deemed as the relevant AICHAIN Token 
+purchaser having been fully aware of and 
+agreed to take all the risks below.
+1) Termination of the Campaign 
+The AICHAIN Token crowdsale campaign 
+may be early terminated, in case of which a 
+purchaser may only be refunded with part 
+of his/her payment as a result of the Bitcoin 
+/ Ether price volatility and/or the expenses 
+incurred by the AICHAIN Foundation. 
+2) Insufficient Information Availability 
+AICHAIN is at the stage of development 
+as of the date of this Whitepaper and 
+its philosophy, consensus mechanism, 
+algorithm, code and other technical speci -
+fications and parameters could be updated 
+and changed frequently and constantly. While this Whitepaper has contained 
+the then up-to-date key information of 
+AICHAIN, it is not absolutely complete and 
+is subject to adjustments and updates that 
+the AICHAIN Foundation might make from 
+time to time for certain purposes. The 
+AICHAIN Foundation is not in a position, 
+nor obliged, to keep the purchasers 
+closely posted on every detail of AICHAIN 
+development (including its progress and 
+expected milestones no matter whether 
+rescheduled or not) and therefore will not 
+necessarily provide the purchasers with 
+timely and full access to all the information 
+relating to AICHAIN that may emerge 
+from time to time. The insufficiency of 
+information disclosure is inevitable and 
+reasonable. 
+3) Regulatory Measures 
+Crypto-tokens are being, or may be, 
+overseen by the regulatory authorities 
+of various jurisdictions. The AICHAIN 
+Foundation may receive queries, notices, 
+warnings, requests or rulings from one or 
+more regulatory authorities from time to 
+time, or may even be ordered to suspend or 
+discontinue any action in connection with 
+the Campaign, AICHAIN’s development 
+or AICHAIN Token. The development, 
+marketing, promotion or otherwise of 
+AICHAIN or the AICHAIN Token crowdsale 
+campaign may be seriously affected, 
+hindered or terminated as a result. And 
+since regulatory policies could change 
+from time to time, existing regulatory 
+permission or tolerance on AICHAIN or the 
+AICHAIN Token crowdsale campaign in 
+any jurisdiction could be just temporary. 
+AICHAIN Token could be defined from AICHAIN 
+Whitepaper50
+AICHAINtime to time as a virtual commodity, digital 
+asset or even securities or currency in 
+various jurisdictions and therefore could 
+be prohibited from being traded or held 
+in certain jurisdictions pursuant to local 
+regulatory requirements. 
+ 4) Cryptography 
+Cryptography is evolving and cannot 
+guarantee absolute security at all times. 
+Advances in cryptography, such as code 
+cracking, or technical advances such as the 
+development of quantum computers, could 
+present risks to all cryptography-based 
+systems including AICHAIN. This could 
+result in the theft, loss, disappearance, 
+destruction or devaluation of the AICHAIN 
+Token held by any person. To a reasonable 
+extent, the AICHAIN Foundation will be 
+prepared to take proactive or remedial 
+steps to update the protocol underlying 
+AICHAIN in response to any advances in 
+cryptography and to incorporate additional 
+reasonable security measures where 
+appropriate The future of cryptography or 
+security innovations is unpredictable while 
+the AICHAIN Foundation will try its best 
+to accommodate the continuing changes in 
+the domains of cryptography and security. 
+5) Development Failure or Abortion 
+AICHAIN is still in the process of 
+development, rather than a finished 
+product ready to launch. Due to the techno -
+logical complexity of the AICHAIN system, 
+the AICHAIN Foundation could be faced 
+with unforeseeable and/or insurmountable 
+difficulties from time to time. Accordingly, the development of AICHAIN could fail or 
+abort at any time for any cause (including 
+insufficiency of funds). The development 
+failure or abortion would result in 
+non-availability of the purchased AICHAIN 
+Token for Crowdsale to any purchaser. 
+6) Theft of Crowdsale Proceeds 
+There may be attempts to steal the 
+crowdsale proceeds received by the 
+AICHAIN Foundation (including the fiat 
+currency amount converted therefrom). 
+Such a theft or attempted theft may affect 
+the ability of the AICHAIN Foundation 
+to fund the development of AICHAIN. 
+While the AICHAIN Foundation will adopt 
+cutting-edge technical solutions to keep 
+the crowdsale proceeds safe, certain cyber 
+thefts could be hardly unpreventable. 
+7) Flaws in Source Code 
+Nobody can guarantee the source code of 
+AICHAIN to be flaw-free. It may contain 
+certain flaws, errors, defects and bugs, 
+which may disable some functionality 
+for users, expose users’ information 
+or otherwise. Such flaws, if any, would 
+compromise the usability, stability, and/
+or security of AICHAIN and consequently 
+bring adverse impact on the value of 
+AICHAIN Token. Open source codes rely 
+on transparency to promote communi -
+ty-sourced identification and solution of 
+problems within the code. The AICHAIN 
+Foundation will work closely together 
+with the AICHAIN community to keep 
+improving, optimizing and perfecting the 
+source code of AICHAIN onards. AICHAIN 
+Whitepaper51
+AICHAIN8) Unpermissioned, Decentralized and 
+Autonomous Ledger 
+There are three prevailing categories of 
+distributed ledger adopted among the 
+contemporary blockchain projects, namely, 
+unpermissioned ledger, consortium ledger 
+and private ledger. AICHAIN’s underlying 
+distributed ledger is an unpermissioned 
+one, which means it is publicly accessible 
+and useable to everyone on a permis -
+sion-free basis. While AICHAIN is initially 
+developed by the AICHAIN Foundation, 
+it is not owned, operated or otherwise 
+controlled by the AICHAIN Foundation. The 
+community of AICHAIN, which is sponta -
+neously formed and is open, decentralized 
+and admission-free to join, is composed of 
+users, fans, developers, AICHAIN Token 
+holders and other participants worldwide 
+who are mostly not connected with the 
+AICHAIN Foundation in any manner. 
+Such a community will be decentralized 
+and autonomous as to the maintenance, 
+governance and even evolution of AICHAIN 
+while the AICHAIN Foundation will merely 
+be an active player in the community peer 
+to others without supreme or arbitrary 
+authority, irrespective of its earlier 
+efforts and contributions to the genesis of 
+AICHAIN. As a result, it is not at the mercy 
+of the AICHAIN Foundation how AICHAIN 
+would be governed or evolve after the 
+Launch. 
+9) Update of Source Code 
+The source code of AICHAIN is open and 
+could be updated, amended, altered or 
+modified from time to time by any member of the community of AICHAIN. Nobody is 
+able to foresee or guarantee the precise 
+result of an update, amendment, alteration 
+or modification. As a result, any update, 
+amendment, alteration or modification 
+could lead to an unexpected or unintended 
+outcome that adversely affects AICHAIN’s 
+operation or AICHAIN Token’s value. 
+10) Security Weakness 
+The blockchain of AICHAIN rests on 
+open-source software and is an unpermis -
+sioned distributed ledger. Regardless of 
+the AICHAIN Foundation’s effort to keep 
+the AICHAIN system secure, anyone may 
+intentionally or unintentionally introduce 
+weaknesses or bugs into the core infra -
+structural elements of AICHAIN which 
+the security measures adopted by the 
+AICHAIN Foundation are unable to prevent 
+or remedy. This may consequently result 
+in the loss of AICHAIN Token or any other 
+digital tokens held by a purchaser. 
+11) “Distributed Denial of Service” 
+Attack 
+The Ethereum is designed to be public and 
+unpermissioned and therefore may suffer 
+cyber-attacks of “distributed denial of 
+service” from time to time. Such attacks 
+will adversely affect, stagnate or paralyze 
+the network of the AICHAIN system and 
+accordingly render the transactions 
+thereon delayed to be recorded or included 
+in the blocks of the Ethereum blockchain or 
+even temporarily unable to be performed.
+12) Insufficiency of Processing Power AICHAIN 
+Whitepaper52
+AICHAINThe rapid growth of AICHAIN will be 
+accompanied by a surge of transaction 
+numbers and demand of processing 
+power. If the demand of processing power 
+outgrows how much the nodes of the 
+Ethereum blockchain network can then 
+provide, the network of AICHAIN could 
+be destabilized and/or stagnated, and 
+there could be fraudulent or false transac -
+tions such as “double-spending” to arise. 
+In the worst-case scenario, the AICHAIN 
+Token held by the purchasers could be 
+lost, and rollback or even hardforking of 
+the blockchain of the Ethereum could be 
+triggered. All these aftermaths would do 
+harm to the usability, stability and security 
+of AICHAIN and the value of AICHAIN 
+Token. 
+13) Unauthorized Claim of AICHAIN 
+Token for Crowdsale 
+Any person who gains access to the 
+AICHAIN Token purchaser’s registered 
+email or registered account by deciphering 
+or cracking the purchaser’s password will 
+be able to claim the purchased AICHAIN 
+Token for Crowdsale in bad faith. As such, 
+the relevant purchased AICHAIN Token for 
+Crowdsale may be missent to the person 
+whoever claims that the same through the 
+purchaser’s registered email or registered 
+account, which sending is not revocable or 
+reversible. Each AICHAIN Token purchaser 
+shall take care of the security of his/her 
+registered email and registered account 
+throughout by taking such actions as: 
+(i) using a highly secure password; (ii) 
+refraining from opening or responding to 
+any scam emails; and (iii) keeping strictly confidential all the secret or personal 
+information about himself/herself. 
+14) Private Key of AICHAIN Token Wallet 
+The loss or destruction of a private key 
+required to access AICHAIN Token may be 
+irreversible. AICHAIN Token are control -
+lable only by possessing both the relevant 
+unique public and private keys through 
+the local or online AICHAIN Token wallet. 
+Each purchaser is required to safeguard 
+the private keys contained in his/her own 
+AICHAIN Token wallet(s). Where such 
+private key of a AICHAIN Token purchaser 
+is lost, missing, divulged, destroyed or 
+otherwise compromised, neither the 
+AICHAIN Foundation nor anyone else will 
+be able to help the purchaser access or 
+retrieve the related AICHAIN Token. 
+15) Popularity 
+The value of AICHAIN Token hinges heavily 
+on the popularity of the AICHAIN system. 
+AICHAIN is not expected to be popular, 
+prevalent or widely used soon after the 
+Launch. The worst-case scenario is that 
+AICHAIN may even remain marginal -
+ized in the long run, appealing to only a 
+minimal portion of the users. By contrast, 
+a significant portion of AICHAIN Token 
+demand could be of speculative nature. 
+The lack of users may result in increasing 
+volatility of AICHAIN Token market price 
+and consequently compromise AICHAIN’s 
+long-term development. The AICHAIN 
+Foundation will not (nor has the respon -
+sibility to) stabilize or otherwise affect 
+AICHAIN Token’s market price if there is AICHAIN 
+Whitepaper53
+AICHAINany such price. 
+16 ) Liquidity 
+AICHAIN Token is not a currency issued 
+by any individual, entity, central bank or 
+national, supra-national or quasi-national 
+organization, nor is it backed by any hard 
+assets or other credit. The circulation and 
+trading of AICHAIN Token on the market 
+are not what the AICHAIN Foundation 
+is responsible for or pursues. Trading of 
+AICHAIN Token merely depends on the 
+consensus on its value between the relevant 
+market participants. Nobody is obliged to 
+redeem or purchase any AICHAIN Token 
+from any AICHAIN Token holder (including 
+the purchasers). Nor does anyone guarantee 
+the liquidity or market price of AICHAIN 
+Token to any extent at any time. To divest 
+his/her AICHAIN Token, a AICHAIN Token 
+holder would have to locate one or more 
+willing buyers to purchase the same at a 
+mutually agreed price, which attempt could 
+be costly and time-consuming and does 
+not necessarily bear fruit. And there could 
+be no crypto-currency exchange or other 
+marketplace having AICHAIN Token listed 
+thereon for trading. 
+17) Price Volatility 
+Cryptographic tokens, if traded on public 
+markets, usually have extremely volatile 
+prices. Fluctuations in price over short 
+periods of time frequently occur, which 
+price may be denominated in Bitcoin, Ether, 
+US Dollars or any other fiat currency. Such 
+fluctuations could result from market 
+forces (including speculations), regulatory changes, technical innovations, availability 
+of exchanges and other objective factors 
+and represent changes in the balance 
+of supply and demand. The AICHAIN 
+Foundation is not responsible for any 
+secondary market trading of AICHAIN 
+Token no matter whether or not there 
+would be such markets for AICHAIN Token. 
+Therefore, the AICHAIN Foundation neither 
+is obliged to tame the price volatility of 
+AICHAIN Token nor cares about that. The 
+risks associated with AICHAIN Token 
+trading price have to be taken by the 
+AICHAIN Token traders themselves. 
+18) Competition 
+AICHAIN’s underlying protocol is based 
+on an open-source computer software 
+such that nobody claims copyright or any 
+other type of intellectual property right 
+of the source code. As a result, anyone 
+can legally copy, replicate, reproduce, 
+engineer, modify, upgrade, improve, 
+recode, reprogram or otherwise utilize the 
+source code and/or underlying protocol 
+of AICHAIN in an attempt to develop a 
+competing protocol, software, system 
+or virtual platform or virtual machine, 
+which is out of the AICHAIN Foundation’s 
+control and may consequently compete 
+with or even overshadow or overtake 
+AICHAIN. Besides, there have been and will 
+be various competing blockchain-based 
+platforms that compete with AICHAIN. 
+The AICHAIN Foundation will in no case 
+be capable of eliminating, preventing, 
+restricting or minimizing such competing 
+efforts that aim to contest with or overtake 
+AICHAIN.

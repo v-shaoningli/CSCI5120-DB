@@ -1,0 +1,1126 @@
+ 
+ 
+     
+         
+   
+ 
+WhenSatoshiNakamotofirstsettheBitcoinblockchainintomotioninJanuary2009,hewas                 
+simultaneouslyintroducingtworadicalanduntestedconcepts.Thefirstisthe"bitcoin",adecentralized               
+peer-to-peeronlinecurrencythatmaintainsavaluewithoutanybacking,intrinsicvalueorcentralissuer.So                 
+far,the"bitcoin"asacurrencyunithastakenupthebulkofthepublicattention,bothintermsofthepolitical                       
+aspectsofacurrencywithoutacentralbankanditsextremeupwardanddownwardvolatilityinprice.                  
+However,thereisalsoanother,equallyimportant,parttoSatoshi'sgrandexperiment:theconceptofaproofof                   
+work-basedblockchaintoallowforpublicagreementontheorderoftransactions.Bitcoinasanapplicationcan                  
+bedescribedasafirst-to-filesystem:ifoneentityhas50BTC,andsimultaneouslysendsthesame50BTCto                     
+AandtoB,onlythetransactionthatgetsconfirmedfirstwillprocess.Thereisnointrinsicwayofdetermining                     
+fromtwotransactionswhichcameearlier,andfordecadesthisstymiedthedevelopmentofdecentralized                
+digitalcurrency.Satoshi'sblockchainwasthefirstcredibledecentralizedsolution.Andnow,attentionis               
+rapidlystartingtoshifttowardthissecondpartofBitcoin'stechnology,andhowtheblockchainconceptcanbe                   
+used for more than just money. 
+Commonlycitedapplicationsincludeusingon-blockchaindigitalassetstorepresentcustomcurrenciesand              
+financialinstruments("coloredcoins"),theownershipofanunderlyingphysicaldevice("smartproperty"),              
+non-fungibleassetssuchasdomainnames("Namecoin")aswellasmoreadvancedapplicationssuchas                
+decentralizedexchange,financialderivatives,peer-to-peergamblingandon-blockchainidentityand           
+reputationsystems.Anotherimportantareaofinquiryis"smartcontracts"-systemswhichautomatically               
+movedigitalassetsaccordingtoarbitrarypre-specifiedrules.Forexample,onemighthaveatreasurycontract                 
+oftheform"AcanwithdrawuptoXcurrencyunitsperday,BcanwithdrawuptoYperday,AandBtogether                          
+canwithdrawanything,andAcanshutoffB'sabilitytowithdraw".Thelogicalextensionofthisis                   
+decentralizedautonomousorganizations(DAOs)-long-termsmartcontractsthatcontaintheassetsand              
+encodethebylawsofanentireorganization.WhatEthereumintendstoprovideisablockchainwithabuilt-in                   
+fullyfledgedTuring-completeprogramminglanguagethatcanbeusedtocreate"contracts"thatcanbeused                 
+toencodearbitrarystatetransitionfunctions,allowinguserstocreateanyofthesystemsdescribedabove,as                  
+well as many others that we have not yet imagined, simply by writing up the logic in a few lines of code. 
+ 
+ 
+Page 1 
+ethereum.org 
+Ethereum : A Next-Generation Smart Contract and Decentralized Application Platform.
+By Vitalik Buterin (2014).  
+Table of contents 
+  
+● History 
+○ Bitcoin As A State Transition System 
+○ Mining 
+○ Merkle Trees 
+○ Alternative Blockchain Applications 
+○ Scripting 
+● Ethereum 
+○ Ethereum Accounts 
+○ Messages and Transactions 
+○ Ethereum State Transition Function 
+○ Code Execution 
+○ Blockchain and Mining 
+● Applications 
+○ Token Systems 
+○ Financial derivatives 
+○ Identity and Reputation Systems 
+○ Decentralized File Storage 
+○ Decentralized Autonomous Organizations 
+○ Further Applications 
+● Miscellanea And Concerns 
+○ Modified GHOST Implementation 
+○ Fees 
+○ Computation And Turing-Completeness 
+○ Currency And Issuance 
+○ Mining Centralization 
+○ Scalability 
+● Putting It All Together: Decentralized Applications 
+● Conclusion 
+● References and Further Reading 
+ 
+ 
+Page 2 
+ethereum.org  
+ 
+ 
+Page 3 
+ethereum.org History 
+Theconceptofdecentralizeddigitalcurrency,aswellasalternativeapplicationslikepropertyregistries,               
+hasbeenaroundfordecades.Theanonymouse-cashprotocolsofthe1980sandthe1990s,mostly                 
+reliantonacryptographicprimitiveknownasChaumianblinding,providedacurrencywithahighdegree                 
+ofprivacy,buttheprotocolslargelyfailedtogaintractionbecauseoftheirrelianceonacentralized                  
+intermediary.In1998,WeiDai'sb-moneybecamethefirstproposaltointroducetheideaofcreating                 
+moneythroughsolvingcomputationalpuzzlesaswellasdecentralizedconsensus,buttheproposal              
+wasscantondetailsastohowdecentralizedconsensuscouldactuallybeimplemented.In2005,Hal                 
+Finneyintroducedaconceptof"reusableproofsofwork",asystemwhichusesideasfromb-money                 
+togetherwithAdamBack'scomputationallydifficultHashcashpuzzlestocreateaconceptfora               
+cryptocurrency, but once again fell short of the ideal by relying on trusted computing as a backend. 
+Becausecurrencyisafirst-to-fileapplication,wheretheorderoftransactionsisoftenofcritical                
+importance,decentralizedcurrenciesrequireasolutiontodecentralizedconsensus.Themainroadblock             
+thatallpre-Bitcoincurrencyprotocolsfacedisthefactthat,whiletherehadbeenplentyofresearchon                   
+creatingsecureByzantine-fault-tolerantmultipartyconsensussystemsformanyyears,allofthe             
+protocolsdescribedweresolvingonlyhalfoftheproblem.Theprotocolsassumedthatallparticipantsin                 
+thesystemwereknown,andproducedsecuritymarginsoftheform"ifNpartiesparticipate,thenthe                  
+systemcantolerateuptoN/4maliciousactors".Theproblemis,however,thatinananonymoussetting                  
+suchsecuritymarginsarevulnerabletosybilattacks,whereasingleattackercreatesthousandsof                
+simulated nodes on a server or botnet and uses these nodes to unilaterally secure a majority share. 
+TheinnovationprovidedbySatoshiistheideaofcombiningaverysimpledecentralizedconsensus                
+protocol,basedonnodescombiningtransactionsintoa"block"everytenminutescreatingan               
+ever-growingblockchain,withproofofworkasamechanismthroughwhichnodesgaintherightto                 
+participateinthesystem.Whilenodeswithalargeamountofcomputationalpowerdohave                
+proportionatelygreaterinfluence,comingupwithmorecomputationalpowerthantheentirenetwork              
+combinedismuchharderthansimulatingamillionnodes.DespitetheBitcoinblockchainmodel's               
+crudenessandsimplicity,ithasproventobegoodenough,andwouldoverthenextfiveyearsbecome                   
+the bedrock of over two hundred currencies and protocols around the world. 
+ 
+ 
+Page 4 
+ethereum.org Bitcoin As A State Transition System 
+ 
+Fromatechnicalstandpoint,theBitcoinledgercanbethoughtofasastatetransitionsystem,wherethereis                    
+a"state"consistingoftheownershipstatusofallexistingbitcoinsanda"statetransitionfunction"thattakes                   
+astateandatransactionandoutputsanewstatewhichistheresult.Inastandardbankingsystem,for                     
+example,thestateisabalancesheet,atransactionisarequesttomove$XfromAtoB,andthestate                       
+transitionfunctionreducesthevalueinA'saccountby$XandincreasesthevalueinB'saccountby$X.IfA's                      
+accounthaslessthan$Xinthefirstplace,thestatetransitionfunctionreturnsanerror.Hence,onecan                    
+formally define: 
+APPLY(S,TX) ­> S' or ERROR 
+ 
+In the banking system defined above: 
+APPLY({Alice:$50,Bob:$50},"send$20fromAlicetoBob")={Alice:$30,                   
+Bob: $70 } 
+ 
+But: 
+APPLY({ Alice: $50, Bob: $50 },"send $70 from Alice to Bob") = ERROR 
+ 
+The"state"inBitcoinisthecollectionofallcoins(technically,"unspenttransactionoutputs"orUTXO)that                  
+havebeenmintedandnotyetspent,witheachUTXOhavingadenominationandanowner(definedbya                    
+20-byteaddresswhichisessentiallyacryptographicpublickey[1]).Atransactioncontainsoneormoreinputs,                 
+witheachinputcontainingareferencetoanexistingUTXOandacryptographicsignatureproducedbythe                  
+privatekeyassociatedwiththeowner'saddress,andoneormoreoutputs,witheachoutputcontaininganew                   
+UTXO to be added to the state. 
+ 
+ 
+Page 5 
+ethereum.org  
+The state transition function APPLY(S,TX) ­> S' can be defined roughly as follows: 
+1. For each input in TX: 
+i. If the referenced UTXO is not in S, return an error. 
+ii.If the provided signature does not match the owner of the UTXO, return an error. 
+2. IfthesumofthedenominationsofallinputUTXOislessthanthesumofthedenominationsof                    
+all output UTXO,  return an error. 
+3. Return S with all input UTXO removed and all output UTXO added. 
+Thefirsthalfofthefirststeppreventstransactionsendersfromspendingcoinsthatdonotexist,thesecond                    
+halfofthefirststeppreventstransactionsendersfromspendingotherpeople'scoins,andthesecondstep                  
+enforcesconservationofvalue.Inordertousethisforpayment,theprotocolisasfollows.SupposeAlicewants                    
+tosend11.7BTCtoBob.First,AlicewilllookforasetofavailableUTXOthatsheownsthattotalsuptoatleast                          
+11.7BTC.Realistically,Alicewillnotbeabletogetexactly11.7BTC;saythatthesmallestshecangetis                      
+6+4+2=12.Shethencreatesatransactionwiththosethreeinputsandtwooutputs.Thefirstoutputwillbe11.7                    
+BTCwithBob'saddressasitsowner,andthesecondoutputwillbetheremaining0.3BTC"change",withthe                     
+owner being Alice herself. 
+ 
+Mining 
+Ifwehadaccesstoatrustworthycentralizedservice,thissystemwouldbetrivialtoimplement;it                  
+couldsimplybecodedexactlyasdescribed.However,withBitcoinwearetryingtobuilda                 
+decentralizedcurrencysystem,sowewillneedtocombinethestatetransitionsystemwitha                
+consensussysteminordertoensurethateveryoneagreesontheorderoftransactions.Bitcoin's                
+decentralizedconsensusprocessrequiresnodesinthenetworktocontinuouslyattempttoproduce              
+packagesoftransactionscalled"blocks".Thenetworkisintendedtoproduceroughlyoneblockevery                
+tenminutes,witheachblockcontainingatimestamp,anonce,areferenceto(ie.hashof)the                  
+ 
+Page 6 
+ethereum.org previousblockandalistofallofthetransactionsthathavetakenplacesincethepreviousblock.                   
+Overtime,thiscreatesapersistent,ever-growing,"blockchain"thatconstantlyupdatestorepresent              
+the latest state of the Bitcoin ledger. 
+ 
+The algorithm for checking if a block is valid, expressed in this paradigm, is as follows: 
+1.Check if the previous block referenced by the block exists and is valid 
+2.Checkthatthetimestampoftheblockisgreaterthanthatofthepreviousblock[2]andlessthan2                    
+hours into the future. 
+3.Check that the proof of work on the block is valid. 
+4.Let S[0] be the state at the end of the previous block. 
+5.SupposeTXistheblock'stransactionlistwithntransactions.Foralliin0...n-1,setS[i+1]=                  
+APPLY(S[i],TX[i]) If any application returns an error, exit and return false. 
+6.Return true, and register S[n] as the state at the end of this block 
+ 
+Essentially,eachtransactionintheblockmustprovideastatetransitionthatisvalid.Notethatthestateis                    
+notencodedintheblockinanyway;itispurelyanabstractiontoberememberedbythevalidatingnodeand                      
+canonlybe(securely)computedforanyblockbystartingfromthegenesisstateandsequentiallyapplying                  
+everytransactionineveryblock.Additionally,notethattheorderinwhichtheminerincludestransactionsinto                  
+theblockmatters;iftherearetwotransactionsAandBinablocksuchthatBspendsaUTXOcreatedbyA,                        
+then the block will be valid if A comes before B but not otherwise. 
+Theinterestingpartoftheblockvalidationalgorithmistheconceptof"proofofwork":theconditionisthatthe                     
+SHA256hashofeveryblock,treatedasa256-bitnumber,mustbelessthanadynamicallyadjustedtarget,                   
+whichasofthetimeofthiswritingisapproximately2190.Thepurposeofthisistomakeblockcreation                     
+computationally"hard",therebypreventingsybilattackersfromremakingtheentireblockchainintheirfavor.               
+BecauseSHA256isdesignedtobeacompletelyunpredictablepseudorandomfunction,theonlywaytocreate                 
+avalidblockissimplytrialanderror,repeatedlyincrementingthenonceandseeingifthenewhashmatches.                    
+Atthecurrenttargetof2192,thismeansanaverageof264tries;ingeneral,thetargetisrecalibratedbythe                      
+networkevery2016blockssothatonaverageanewblockisproducedbysomenodeinthenetworkeveryten                      
+minutes.Inordertocompensateminersforthiscomputationalwork,theminerofeveryblockisentitledto                   
+includeatransactiongivingthemselves25BTCoutofnowhere.Additionally,ifanytransactionhasahigher                  
+totaldenominationinitsinputsthaninitsoutputs,thedifferencealsogoestotheminerasa"transaction                    
+fee".Incidentally,thisisalsotheonlymechanismbywhichBTCareissued;thegenesisstatecontainedno                   
+coins at all. 
+ 
+ 
+Page 7 
+ethereum.org  
+ 
+Inordertobetterunderstandthepurposeofmining,letusexaminewhathappensintheeventofamalicious                     
+attacker.SinceBitcoin'sunderlyingcryptographyisknowntobesecure,theattackerwilltargettheonepartof                   
+theBitcoinsystemthatisnotprotectedbycryptographydirectly:theorderoftransactions.Theattacker's                 
+strategy is simple: 
+1.Send100BTCtoamerchantinexchangeforsomeproduct(preferablyarapid-deliverydigital                
+good) 
+2.Wait for the delivery of the product 
+3.Produce another transaction sending the same 100 BTC to himself 
+4.Try to convince the network that his transaction to himself was the one that came first. 
+Oncestep(1)hastakenplace,afterafewminutessomeminerwillincludethetransactioninablock,say                     
+blocknumber270000.Afteraboutonehour,fivemoreblockswillhavebeenaddedtothechainafterthatblock,                     
+witheachofthoseblocksindirectlypointingtothetransactionandthus"confirming"it.Atthispoint,the                   
+merchantwillacceptthepaymentasfinalizedanddelivertheproduct;sinceweareassumingthisisadigital                    
+good,deliveryisinstant.Now,theattackercreatesanothertransactionsendingthe100BTCtohimself.Ifthe                   
+attackersimplyreleasesitintothewild,thetransactionwillnotbeprocessed;minerswillattempttorun                   
+APPLY(S,TX)andnoticethatTXconsumesaUTXOwhichisnolongerinthestate.Soinstead,theattacker                    
+createsa"fork"oftheblockchain,startingbymininganotherversionofblock270000pointingtothesame                   
+block269999asaparentbutwiththenewtransactioninplaceoftheoldone.Becausetheblockdatais                      
+different,thisrequiresredoingtheproofofwork.Furthermore,theattacker'snewversionofblock270000hasa                   
+differenthash,sotheoriginalblocks270001to270005donot"point"toit;thus,theoriginalchainandthe                     
+attacker'snewchainarecompletelyseparate.Theruleisthatinaforkthelongestblockchain(ie.theone                    
+backedbythelargestquantityofproofofwork)istakentobethetruth,andsolegitimateminerswillworkon                       
+the270005chainwhiletheattackeraloneisworkingonthe270000chain.Inorderfortheattackertomake                     
+hisblockchainthelongest,hewouldneedtohavemorecomputationalpowerthantherestofthenetwork                   
+combined in order to catch up (hence, "51% attack"). 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 8 
+ethereum.org  
+ 
+ 
+Merkle Trees 
+Left: it suffices to present only a small number of nodes in a Merkle tree to give a proof of the validity of a branch. 
+Right:anyattempttochangeanypartoftheMerkletreewilleventuallyleadtoaninconsistencysomewhereupthe                     
+chain. 
+ 
+ 
+AnimportantscalabilityfeatureofBitcoinisthattheblockisstoredinamulti-leveldatastructure.The"hash"                    
+ofablockisactuallyonlythehashoftheblockheader,aroughly200-bytepieceofdatathatcontainsthe                      
+timestamp,nonce,previousblockhashandtheroothashofadatastructurecalledtheMerkletreestoringall                    
+transactions in the block.  
+AMerkletreeisatypeofbinarytree,composedofasetofnodeswithalargenumberofleafnodesatthe                         
+bottomofthetreecontainingtheunderlyingdata,asetofintermediatenodeswhereeachnodeisthehashof                     
+itstwochildren,andfinallyasinglerootnode,alsoformedfromthehashofitstwochildren,representingthe                     
+"top"ofthetree.ThepurposeoftheMerkletreeistoallowthedatainablocktobedeliveredpiecemeal:anode                         
+candownloadonlytheheaderofablockfromonesource,thesmallpartofthetreerelevanttothemfrom                      
+ 
+Page 9 
+ethereum.org anothersource,andstillbeassuredthatallofthedataiscorrect.Thereasonwhythisworksisthathashes                      
+propagateupward:ifamalicioususerattemptstoswapinafaketransactionintothebottomofaMerkletree,                     
+thischangewillcauseachangeinthenodeabove,andthenachangeinthenodeabovethat,finally                     
+changingtherootofthetreeandthereforethehashoftheblock,causingtheprotocoltoregisteritasa                      
+completely different block (almost certainly with an invalid proof of work). 
+TheMerkletreeprotocolisarguablyessentialtolong-termsustainability.A"fullnode"intheBitcoinnetwork,                  
+onethatstoresandprocessestheentiretyofeveryblock,takesupabout15GBofdiskspaceintheBitcoin                      
+networkasofApril2014,andisgrowingbyoveragigabytepermonth.Currently,thisisviableforsomedesktop                      
+computersandnotphones,andlateroninthefutureonlybusinessesandhobbyistswillbeabletoparticipate.                    
+Aprotocolknownas"simplifiedpaymentverification"(SPV)allowsforanotherclassofnodestoexist,called                  
+"lightnodes",whichdownloadtheblockheaders,verifytheproofofworkontheblockheaders,andthen                   
+downloadonlythe"branches"associatedwithtransactionsthatarerelevanttothem.Thisallowslightnodes                 
+todeterminewithastrongguaranteeofsecuritywhatthestatusofanyBitcointransaction,andtheircurrent                   
+balance, is while downloading only a very small portion of the entire blockchain. 
+Alternative Blockchain Applications 
+Theideaoftakingtheunderlyingblockchainideaandapplyingittootherconceptsalsohasalonghistory.In                     
+2005,NickSzabocameoutwiththeconceptof"securepropertytitleswithownerauthority",adocument                  
+describinghow"newadvancesinreplicateddatabasetechnology"willallowforablockchain-basedsystemfor                
+storingaregistryofwhoownswhatland,creatinganelaborateframeworkincludingconceptssuchas                 
+homesteading,adversepossessionandGeorgianlandtax.However,therewasunfortunatelynoeffective              
+replicateddatabasesystemavailableatthetime,andsotheprotocolwasneverimplementedinpractice.                 
+After2009,however,onceBitcoin'sdecentralizedconsensuswasdevelopedanumberofalternative              
+applications rapidly began to emerge: 
+● Namecoin-createdin2010,Namecoinisbestdescribedasadecentralizednameregistration               
+database.IndecentralizedprotocolslikeTor,BitcoinandBitMessage,thereneedstobesomeway                
+ofidentifyingaccountssothatotherpeoplecaninteractwiththem,butinallexistingsolutionsthe                  
+only kind of identifier available is a pseudorandom hash          
+like1LW79wp5ZBqaHW1jL5TCiBCrhQYtHagUWy.Ideally,onewouldliketobeabletohavean            
+accountwithanamelike"george".However,theproblemisthatifonepersoncancreatean                  
+accountnamed"george"thensomeoneelsecanusethesameprocesstoregister"george"for                
+themselvesaswellandimpersonatethem.Theonlysolutionisafirst-to-fileparadigm,wherethe                
+firstregistrantsucceedsandthesecondfails-aproblemperfectlysuitedfortheBitcoinconsensus                 
+protocol.Namecoinistheoldest,andmostsuccessful,implementationofanameregistration              
+system using such an idea. 
+● Coloredcoins-thepurposeofcoloredcoinsistoserveasaprotocoltoallowpeopletocreatetheir                     
+owndigitalcurrencies-or,intheimportanttrivialcaseofacurrencywithoneunit,digitaltokens,                   
+ 
+Page 10 
+ethereum.org ontheBitcoinblockchain.Inthecoloredcoinsprotocol,one"issues"anewcurrencybypublicly                 
+assigningacolortoaspecificBitcoinUTXO,andtheprotocolrecursivelydefinesthecolorofother                  
+UTXOtobethesameasthecoloroftheinputsthatthetransactioncreatingthemspent(some                   
+specialrulesapplyinthecaseofmixed-colorinputs).Thisallowsuserstomaintainwallets                
+containingonlyUTXOofaspecificcolorandsendthemaroundmuchlikeregularbitcoins,                
+backtracking through the blockchain to determine the color of any UTXO that they receive. 
+● Metacoins-theideabehindametacoinistohaveaprotocolthatlivesontopofBitcoin,using                    
+Bitcointransactionstostoremetacointransactionsbuthavingadifferentstatetransitionfunction,              
+APPLY'.Becausethemetacoinprotocolcannotpreventinvalidmetacointransactionsfrom            
+appearingintheBitcoinblockchain,aruleisaddedthatifAPPLY'(S,TX)returnsanerror,the                 
+protocoldefaultstoAPPLY'(S,TX)=S.Thisprovidesaneasymechanismforcreatinganarbitrary                
+cryptocurrencyprotocol,potentiallywithadvancedfeaturesthatcannotbeimplementedinsideof             
+Bitcoinitself,butwithaverylowdevelopmentcostsincethecomplexitiesofminingandnetworking                 
+are already handled by the Bitcoin protocol. 
+Thus,ingeneral,therearetwoapproachestowardbuildingaconsensusprotocol:buildinganindependent                
+network,andbuildingaprotocolontopofBitcoin.Theformerapproach,whilereasonablysuccessfulinthe                  
+caseofapplicationslikeNamecoin,isdifficulttoimplement;eachindividualimplementationneedsto               
+bootstrapanindependentblockchain,aswellasbuildingandtestingallofthenecessarystatetransitionand                  
+networkingcode.Additionally,wepredictthatthesetofapplicationsfordecentralizedconsensustechnology               
+willfollowapowerlawdistributionwherethevastmajorityofapplicationswouldbetoosmalltowarranttheir                    
+ownblockchain,andwenotethatthereexistlargeclassesofdecentralizedapplications,particularly               
+decentralized autonomous organizations, that need to interact with each other. 
+TheBitcoin-basedapproach,ontheotherhand,hastheflawthatitdoesnotinheritthesimplifiedpayment                   
+verificationfeaturesofBitcoin.SPVworksforBitcoinbecauseitcanuseblockchaindepthasaproxyfor                   
+validity;atsomepoint,oncetheancestorsofatransactiongofarenoughback,itissafetosaythattheywere                       
+legitimatelypartofthestate.Blockchain-basedmeta-protocols,ontheotherhand,cannotforcetheblockchain                
+nottoincludetransactionsthatarenotvalidwithinthecontextoftheirownprotocols.Hence,afullysecure                    
+SPVmeta-protocolimplementationwouldneedtobackwardscanallthewaytothebeginningoftheBitcoin                  
+blockchaintodeterminewhetherornotcertaintransactionsarevalid.Currently,all"light"implementationsof                
+Bitcoin-basedmeta-protocolsrelyonatrustedservertoprovidethedata,arguablyahighlysuboptimalresult                 
+especially when one of the primary purposes of a cryptocurrency is to eliminate the need for trust. 
+Scripting 
+Evenwithoutanyextensions,theBitcoinprotocolactuallydoesfacilitateaweakversionofaconceptof"smart                   
+contracts".UTXOinBitcoincanbeownednotjustbyapublickey,butalsobyamorecomplicatedscript                     
+expressedinasimplestack-basedprogramminglanguage.Inthisparadigm,atransactionspendingthat               
+UTXOmustprovidedatathatsatisfiesthescript.Indeed,eventhebasicpublickeyownershipmechanismis                  
+ 
+Page 11 
+ethereum.org implementedviaascript:thescripttakesanellipticcurvesignatureasinput,verifiesitagainstthe                  
+transactionandtheaddressthatownstheUTXO,andreturns1iftheverificationissuccessfuland0                   
+otherwise.Other,morecomplicated,scriptsexistforvariousadditionalusecases.Forexample,onecan                
+constructascriptthatrequiressignaturesfromtwooutofagiventhreeprivatekeystovalidate("multisig"),a                    
+setupusefulforcorporateaccounts,securesavingsaccountsandsomemerchantescrowsituations.Scripts               
+canalsobeusedtopaybountiesforsolutionstocomputationalproblems,andonecanevenconstructascript                    
+thatsayssomethinglike"thisBitcoinUTXOisyoursifyoucanprovideanSPVproofthatyousentaDogecoin                      
+transaction of this denomination to me", essentially allowing decentralized cross-cryptocurrency exchange. 
+However, the scripting language as implemented in Bitcoin has several important limitations: 
+● LackofTuring-completeness-thatistosay,whilethereisalargesubsetofcomputation                 
+thattheBitcoinscriptinglanguagesupports,itdoesnotnearlysupporteverything.Themain               
+categorythatismissingisloops.Thisisdonetoavoidinfiniteloopsduringtransactionverification;                 
+theoreticallyitisasurmountableobstacleforscriptprogrammers,sinceanyloopcanbesimulated                
+bysimplyrepeatingtheunderlyingcodemanytimeswithanifstatement,butitdoesleadtoscripts                   
+thatareveryspace-inefficient.Forexample,implementinganalternativeellipticcurvesignature             
+algorithmwouldlikelyrequire256repeatedmultiplicationroundsallindividuallyincludedinthe              
+code. 
+● Value-blindness-thereisnowayforaUTXOscripttoprovidefine-grainedcontroloverthe                 
+amountthatcanbewithdrawn.Forexample,onepowerfulusecaseofanoraclecontractwouldbea                   
+hedgingcontract,whereAandBputin$1000worthofBTCandafter30daysthescriptsends$1000                     
+worthofBTCtoAandtheresttoB.Thiswouldrequireanoracletodeterminethevalueof1BTCin                        
+USD,buteventhenitisamassiveimprovementintermsoftrustandinfrastructurerequirementover                  
+thefullycentralizedsolutionsthatareavailablenow.However,becauseUTXOareall-or-nothing,the               
+onlywaytoachievethisisthroughtheveryinefficienthackofhavingmanyUTXOofvarying                  
+denominations(eg.oneUTXOof2kforeverykupto30)andhavingtheoraclepickwhichUTXOto                     
+send to A and which to B. 
+● Lackofstate-UTXOcaneitherbespentorunspent;thereisnoopportunityformulti-stage                  
+contractsorscriptswhichkeepanyotherinternalstatebeyondthat.Thismakesithardtomake                  
+multi-stageoptionscontracts,decentralizedexchangeoffersortwo-stagecryptographiccommitment           
+protocols(necessaryforsecurecomputationalbounties).ItalsomeansthatUTXOcanonlybeused                
+tobuildsimple,one-offcontractsandnotmorecomplex"stateful"contractssuchasdecentralized               
+organizations,andmakesmeta-protocolsdifficulttoimplement.Binarystatecombinedwith            
+value-blindness also mean that another important application, withdrawal limits, is impossible. 
+● Blockchain-blindness-UTXOareblindtoblockchaindatasuchasthenonceandprevious               
+hash.Thisseverelylimitsapplicationsingambling,andseveralothercategories,bydeprivingthe               
+scripting language of a potentially valuable source of randomness. 
+ 
+Page 12 
+ethereum.org Thus,weseethreeapproachestobuildingadvancedapplicationsontopofcryptocurrency:buildinganew                 
+blockchain,usingscriptingontopofBitcoin,andbuildingameta-protocolontopofBitcoin.Buildinganew                   
+blockchainallowsforunlimitedfreedominbuildingafeatureset,butatthecostofdevelopmenttimeand                   
+bootstrappingeffort.Usingscriptingiseasytoimplementandstandardize,butisverylimitedinits                 
+capabilities,andmeta-protocols,whileeasy,sufferfromfaultsinscalability.WithEthereum,weintendtobuild                 
+a generalized framework that can provide the advantages of all three paradigms at the same time. 
+ 
+Ethereum 
+TheintentofEthereumistomergetogetherandimproveupontheconceptsofscripting,altcoinsandon-chain                   
+meta-protocols,andallowdeveloperstocreatearbitraryconsensus-basedapplicationsthathavethe             
+scalability,standardization,feature-completeness,easeofdevelopmentandinteroperabilityofferedbythese            
+differentparadigmsallatthesametime.Ethereumdoesthisbybuildingwhatisessentiallytheultimate                  
+abstractfoundationallayer:ablockchainwithabuilt-inTuring-completeprogramminglanguage,allowing             
+anyonetowritesmartcontractsanddecentralizedapplicationswheretheycancreatetheirownarbitrary                
+rulesforownership,transactionformatsandstatetransitionfunctions.Abare-bonesversionofNamecoincan                
+bewrittenintwolinesofcode,andotherprotocolslikecurrenciesandreputationsystemscanbebuiltinunder                     
+twenty.Smartcontracts,cryptographic"boxes"thatcontainvalueandonlyunlockitifcertainconditionsare                 
+met,canalsobebuiltontopofourplatform,withvastlymorepowerthanthatofferedbyBitcoinscripting                     
+because of the added powers of Turing-completeness, value-awareness, blockchain-awareness and state. 
+Ethereum Accounts 
+InEthereum,thestateismadeupofobjectscalled"accounts",witheachaccounthavinga20-byteaddress                   
+andstatetransitionsbeingdirecttransfersofvalueandinformationbetweenaccounts.AnEthereumaccount                
+contains four fields: 
+● The nonce, a counter used to make sure each transaction can only be processed once 
+● The account's current ether balance 
+● The account's contract code, if present 
+● The account's storage (empty by default) 
+"Ether"isthemaininternalcrypto-fuelofEthereum,andisusedtopaytransactionfees.Ingeneral,thereare                    
+twotypesofaccounts:externallyownedaccounts,controlledbyprivatekeys,andcontractaccounts,controlled                
+bytheircontractcode.Anexternallyownedaccounthasnocode,andonecansendmessagesfroman                   
+externallyownedaccountbycreatingandsigningatransaction;inacontractaccount,everytimethe                 
+ 
+Page 13 
+ethereum.org contractaccountreceivesamessageitscodeactivates,allowingittoreadandwritetointernalstorageand                   
+send other messages or create contracts in turn. 
+ 
+Messages and Transactions 
+"Messages"inEthereumaresomewhatsimilarto“transactions”inBitcoin,butwiththreeimportant               
+differences.First,anEthereummessagecanbecreatedeitherbyanexternalentityoracontract,whereasa                   
+Bitcointransactioncanonlybecreatedexternally.Second,thereisanexplicitoptionforEthereummessages                 
+tocontaindata.Finally,therecipientofanEthereummessage,ifitisacontractaccount,hastheoptionto                     
+return a response; this means that Ethereum messages also encompass the concept of functions. 
+Theterm"transaction"isusedinEthereumtorefertothesigneddatapackagethatstoresamessagetobe                     
+sentfromanexternallyownedaccount.Transactionscontaintherecipientofthemessage,asignature                
+identifyingthesender,theamountofetherandthedatatosend,aswellastwovaluescalledSTARTGASand                     
+GASPRICE.Inordertopreventexponentialblowupandinfiniteloopsincode,eachtransactionisrequiredtoset                   
+alimittohowmanycomputationalstepsofcodeexecutionitcanspawn,includingboththeinitialmessage                   
+andanyadditionalmessagesthatgetspawnedduringexecution.STARTGASisthislimit,andGASPRICEis                 
+thefeetopaytotheminerpercomputationalstep.Iftransactionexecution"runsoutofgas",allstatechanges                     
+revert-exceptforthepaymentofthefees,andiftransactionexecutionhaltswithsomegasremainingthen                    
+theremainingportionofthefeesisrefundedtothesender.Thereisalsoaseparatetransactiontype,and                    
+correspondingmessagetype,forcreatingacontract;theaddressofacontractiscalculatedbasedonthe                  
+hash of the account nonce and transaction data. 
+Animportantconsequenceofthemessagemechanismisthe"firstclasscitizen"propertyofEthereum-the                  
+ideathatcontractshaveequivalentpowerstoexternalaccounts,includingtheabilitytosendmessageand                 
+createothercontracts.Thisallowscontractstosimultaneouslyservemanydifferentroles:forexample,one                
+mighthaveamemberofadecentralizedorganization(acontract)beanescrowaccount(anothercontract)                 
+betweenanparanoidindividualemployingcustomquantum-proofLamportsignatures(athirdcontract)and              
+aco-signingentitywhichitselfusesanaccountwithfivekeysforsecurity(afourthcontract).Thestrengthof                    
+theEthereumplatformisthatthedecentralizedorganizationandtheescrowcontractdonotneedtocare                  
+about what kind of account each party to the contract is. 
+ 
+Page 14 
+ethereum.org Ethereum State Transition Function 
+ 
+The Ethereum state transition function, APPLY(S,TX) -> S' can be defined as follows: 
+1.Checkifthetransactioniswell-formed(ie.hastherightnumberofvalues),thesignatureisvalid,                  
+and the nonce matches the nonce in the sender's account. If not, return an error. 
+2.CalculatethetransactionfeeasSTARTGAS*GASPRICE,anddeterminethesendingaddressfrom               
+thesignature.Subtractthefeefromthesender'saccountbalanceandincrementthesender's               
+nonce. If there is not enough balance to spend, return an error. 
+3.InitializeGAS=STARTGAS,andtakeoffacertainquantityofgasperbytetopayforthebytesin                     
+the transaction. 
+4.Transferthetransactionvaluefromthesender'saccounttothereceivingaccount.Ifthereceiving                
+accountdoesnotyetexist,createit.Ifthereceivingaccountisacontract,runthecontract'scode                   
+either to completion or until the execution runs out of gas. 
+5.Ifthevaluetransferfailedbecausethesenderdidnothaveenoughmoney,orthecodeexecution                  
+ranoutofgas,revertallstatechangesexceptthepaymentofthefees,andaddthefeestothe                     
+miner's account. 
+6.Otherwise,refundthefeesforallremaininggastothesender,andsendthefeespaidforgas                   
+consumed to the miner. 
+ 
+Page 15 
+ethereum.org  
+ 
+For example, suppose that the contract's code is: 
+if !contract.storage[msg.data[0]]: 
+    contract.storage[msg.data[0]] = msg.data[1] 
+Notethatinrealitythecontractcodeiswritteninthelow-levelEVMcode;thisexampleiswritteninSerpent,                     
+ourhigh-levellanguage,forclarity,andcanbecompileddowntoEVMcode.Supposethatthecontract's                  
+storagestartsoffempty,andatransactionissentwith10ethervalue,2000gas,0.001ethergasprice,and                    
+two data fields: [ 2, 'CHARLIE' ][3]. The process for the state transition function in this case is as follows: 
+1.Check that the transaction is valid and well formed. 
+2.Checkthatthetransactionsenderhasatleast2000*0.001=2ether.Ifitis,thensubtract2ether                      
+from the sender's account. 
+3.Initializegas=2000;assumingthetransactionis170byteslongandthebyte-feeis5,subtract                  
+850 so that there is 1150 gas left. 
+4.Subtract 10 more ether from the sender's account, and add it to the contract's account. 
+5.Runthecode.Inthiscase,thisissimple:itchecksifthecontract'sstorageatindex2isused,                     
+noticesthatitisnot,andsoitsetsthestorageatindex2tothevalueCHARLIE.Supposethistakes                      
+187 gas, so the remaining amount of gas is 1150 - 187 = 963 
+6.Add 963 * 0.001 = 0.963 ether back to the sender's account, and return the resulting state. 
+Iftherewasnocontractatthereceivingendofthetransaction,thenthetotaltransactionfeewouldsimplybe                     
+equaltotheprovidedGASPRICEmultipliedbythelengthofthetransactioninbytes,andthedatasent                   
+alongsidethetransactionwouldbeirrelevant.Additionally,notethatcontract-initiatedmessagescanassign              
+agaslimittothecomputationthattheyspawn,andifthesub-computationrunsoutofgasitgetsreverted                     
+onlytothepointofthemessagecall.Hence,justliketransactions,contractscansecuretheirlimited                  
+computational resources by setting strict limits on the sub-computations that they spawn. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 16 
+ethereum.org Code Execution 
+ThecodeinEthereumcontractsiswritteninalow-level,stack-basedbytecodelanguage,referredtoas                 
+"Ethereumvirtualmachinecode"or"EVMcode".Thecodeconsistsofaseriesofbytes,whereeachbyte                   
+representsanoperation.Ingeneral,codeexecutionisaninfiniteloopthatconsistsofrepeatedlycarryingout                  
+theoperationatthecurrentprogramcounter(whichbeginsatzero)andthenincrementingtheprogram                 
+counterbyone,untiltheendofthecodeisreachedoranerrororSTOPorRETURNinstructionisdetected.The                       
+operations have access to three types of space in which to store data: 
+● The stack, a last-in-first-out container to which 32-byte values can be pushed and popped 
+● Memory, an infinitely expandable byte array 
+● Thecontract'slong-termstorage,akey/valuestorewherekeysandvaluesareboth32               
+bytes.Unlikestackandmemory,whichresetaftercomputationends,storagepersistsforthelong                
+term. 
+Thecodecanalsoaccessthevalue,senderanddataoftheincomingmessage,aswellasblockheaderdata,                     
+and the code can also return a byte array of data as an output. 
+TheformalexecutionmodelofEVMcodeissurprisinglysimple.WhiletheEthereumvirtualmachineis                 
+running,itsfullcomputationalstatecanbedefinedbythetuple(block_state,transaction,message,code,                
+memory,stack,pc,gas),whereblock_stateistheglobalstatecontainingallaccountsandincludesbalances                 
+andstorage.Everyroundofexecution,thecurrentinstructionisfoundbytakingthepc-thbyteofcode,and                    
+eachinstructionhasitsowndefinitionintermsofhowitaffectsthetuple.Forexample,ADDpopstwoitemsoff                      
+thestackandpushestheirsum,reducesgasby1andincrementspcby1,andSSTOREpushesthetoptwo                      
+itemsoffthestackandinsertstheseconditemintothecontract'sstorageattheindexspecifiedbythefirst                     
+item,aswellasreducinggasbyupto200andincrementingpcby1.Althoughtherearemanywaysto                      
+optimizeEthereumviajust-in-timecompilation,abasicimplementationofEthereumcanbedoneinafew                 
+hundred lines of code. 
+ 
+Page 17 
+ethereum.org  
+Blockchain and Mining 
+ 
+TheEthereumblockchainisinmanywayssimilartotheBitcoinblockchain,althoughitdoeshavesome                  
+differences.ThemaindifferencebetweenEthereumandBitcoinwithregardtotheblockchainarchitectureis                
+that,unlikeBitcoin,Ethereumblockscontainacopyofboththetransactionlistandthemostrecentstate.                   
+Asidefromthat,twoothervalues,theblocknumberandthedifficulty,arealsostoredintheblock.Theblock                     
+validation algorithm in Ethereum is as follows: 
+1.Check if the previous block referenced exists and is valid. 
+2.Checkthatthetimestampoftheblockisgreaterthanthatofthereferencedpreviousblockand                  
+less than 15 minutes into the future 
+3.Checkthattheblocknumber,difficulty,transactionroot,unclerootandgaslimit(variouslow-level                
+Ethereum-specific concepts) are valid. 
+4.Check that the proof of work on the block is valid. 
+5.Let S[0] be the STATE_ROOT of the previous block. 
+6.LetTXbetheblock'stransactionlist,withntransactions.Forallinin0...n-1,setS[i+1]=                  
+APPLY(S[i],TX[i]).Ifanyapplicationsreturnsanerror,orifthetotalgasconsumedintheblockup                  
+until this point exceeds the GASLIMIT, return an error. 
+7.Let S_FINAL be S[n], but adding the block reward paid to the miner. 
+8.Check if S_FINAL is the same as the STATE_ROOT. If it is, the block is valid; otherwise, it is not valid. 
+ 
+ 
+ 
+ 
+Page 18 
+ethereum.org Theapproachmayseemhighlyinefficientatfirstglance,becauseitneedstostoretheentirestatewitheach                    
+block,butinrealityefficiencyshouldbecomparabletothatofBitcoin.Thereasonisthatthestateisstoredin                      
+thetreestructure,andaftereveryblockonlyasmallpartofthetreeneedstobechanged.Thus,ingeneral,                      
+betweentwoadjacentblocksthevastmajorityofthetreeshouldbethesame,andthereforethedatacanbe                     
+storedonceandreferencedtwiceusingpointers(ie.hashesofsubtrees).Aspecialkindoftreeknownasa                    
+"Patriciatree"isusedtoaccomplishthis,includingamodificationtotheMerkletreeconceptthatallowsfor                   
+nodestobeinsertedanddeleted,andnotjustchanged,efficiently.Additionally,becauseallofthestate                  
+informationispartofthelastblock,thereisnoneedtostoretheentireblockchainhistory-astrategywhich,if                       
+it could be applied to Bitcoin, can be calculated to provide 5-20x savings in space. 
+Applications 
+Ingeneral,therearethreetypesofapplicationsontopofEthereum.Thefirstcategoryisfinancialapplications,                   
+providinguserswithmorepowerfulwaysofmanagingandenteringintocontractsusingtheirmoney.This                 
+includessub-currencies,financialderivatives,hedgingcontracts,savingswallets,wills,andultimatelyeven             
+someclassesoffull-scaleemploymentcontracts.Thesecondcategoryissemi-financialapplications,where              
+moneyisinvolvedbutthereisalsoaheavynon-monetarysidetowhatisbeingdone;aperfectexampleis                     
+self-enforcingbountiesforsolutionstocomputationalproblems.Finally,thereareapplicationssuchasonline               
+voting and decentralized governance that are not financial at all. 
+Token Systems 
+On-blockchaintokensystemshavemanyapplicationsrangingfromsub-currenciesrepresentingassetssuch             
+asUSDorgoldtocompanystocks,individualtokensrepresentingsmartproperty,secureunforgeablecoupons,                
+andeventokensystemswithnotiestoconventionalvalueatall,usedaspointsystemsforincentivization.                   
+TokensystemsaresurprisinglyeasytoimplementinEthereum.Thekeypointtounderstandisthatalla                   
+currency,ortokensysten,fundamentallyisisadatabasewithoneoperation:subtractXunitsfromAandgive                    
+XunitstoB,withtheprovisothat(i)XhadatleastXunitsbeforethetransactionand(2)thetransactionis                        
+approved by A. All that it takes to implement a token system is to implement this logic into a contract. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 19 
+ethereum.org The basic code for implementing a token system in Serpent looks as follows: 
+from = msg.sender 
+to = msg.data[0] 
+value = msg.data[1] 
+ 
+if contract.storage[from] >= value: 
+    contract.storage[from] = contract.storage[from] ­ value 
+    contract.storage[to] = contract.storage[to] + value 
+ 
+Thisisessentiallyaliteralimplementationofthe"bankingsystem"statetransitionfunctiondescribedfurther                
+aboveinthisdocument.Afewextralinesofcodeneedtobeaddedtoprovidefortheinitialstepofdistributing                       
+thecurrencyunitsinthefirstplaceandafewotheredgecases,andideallyafunctionwouldbeaddedtolet                       
+othercontractsqueryforthebalanceofanaddress.Butthat'sallthereistoit.Theoretically,Ethereum-based                   
+tokensystemsactingassub-currenciescanpotentiallyincludeanotherimportantfeaturethaton-chain              
+Bitcoin-basedmeta-currencieslack:theabilitytopaytransactionfeesdirectlyinthatcurrency.Thewaythis                 
+wouldbeimplementedisthatthecontractwouldmaintainanetherbalancewithwhichitwouldrefundether                   
+usedtopayfeestothesender,anditwouldrefillthisbalancebycollectingtheinternalcurrencyunitsthatit                      
+takesinfeesandresellingtheminaconstantrunningauction.Userswouldthusneedto"activate"their                   
+accountswithether,butoncetheetheristhereitwouldbereusablebecausethecontractwouldrefunditeach                     
+time. 
+Financial derivatives and Stable-Value Currencies 
+Financialderivativesarethemostcommonapplicationofa"smartcontract",andoneofthesimplestto                  
+implementincode.Themainchallengeinimplementingfinancialcontractsisthatthemajorityofthem                 
+requirereferencetoanexternalpriceticker;forexample,averydesirableapplicationisasmartcontractthat                   
+hedgesagainstthevolatilityofether(oranothercryptocurrency)withrespecttotheUSdollar,butdoingthis                   
+requiresthecontracttoknowwhatthevalueofETH/USDis.Thesimplestwaytodothisisthrougha"data                      
+feed"contractmaintainedbyaspecificparty(eg.NASDAQ)designedsothatthatpartyhastheabilityto                   
+updatethecontractasneeded,andprovidinganinterfacethatallowsothercontractstosendamessageto                   
+that contract and get back a response that provides the price. 
+Given that critical ingredient, the hedging contract would look as follows: 
+1.Wait for party A to input 1000 ether. 
+2.Wait for party B to input 1000 ether. 
+3.RecordtheUSDvalueof1000ether,calculatedbyqueryingthedatafeedcontract,instorage,saythis                   
+is $x. 
+4.After30days,allowAorBto"ping"thecontractinordertosend$xworthofether(calculatedby                      
+querying the data feed contract again to get the new price) to A and the rest to B. 
+ 
+Page 20 
+ethereum.org Suchacontractwouldhavesignificantpotentialincrypto-commerce.Oneofthemainproblemscitedabout                 
+cryptocurrencyisthefactthatit'svolatile;althoughmanyusersandmerchantsmaywantthesecurityand                  
+convenienceofdealingwithcryptographicassets,theymanynotwishtofacethatprospectoflosing23%of                   
+thevalueoftheirfundsinasingleday.Upuntilnow,themostcommonlyproposedsolutionhasbeen                    
+issuer-backedassets;theideaisthatanissuercreatesasub-currencyinwhichtheyhavetherighttoissue                    
+andrevokeunits,andprovideoneunitofthecurrencytoanyonewhoprovidesthem(offline)withoneunitofa                      
+specifiedunderlyingasset(eg.gold,USD).Theissuerthenpromisestoprovideoneunitoftheunderlying                  
+assettoanyonewhosendsbackoneunitofthecrypto-asset.Thismechanismallowsanynon-cryptographic                 
+asset to be "uplifted" into a cryptographic asset, provided that the issuer can be trusted. 
+Inpractice,however,issuersarenotalwaystrustworthy,andinsomecasesthebankinginfrastructureistoo                  
+weak,ortoohostile,forsuchservicestoexist.Financialderivativesprovideanalternative.Here,insteadofa                   
+singleissuerprovidingthefundstobackupanasset,adecentralizedmarketofspeculators,bettingthatthe                   
+priceofacryptographicreferenceassetwillgoup,playsthatrole.Unlikeissuers,speculatorshavenooptionto                    
+defaultontheirsideofthebargainbecausethehedgingcontractholdstheirfundsinescrow.Notethatthis                    
+approachisnotfullydecentralized,becauseatrustedsourceisstillneededtoprovidethepriceticker,                  
+althougharguablyevenstillthisisamassiveimprovementintermsofreducinginfrastructurerequirements                
+(unlikebeinganissuer,issuingapricefeedrequiresnolicensesandcanlikelybecategorizedasfreespeech)                    
+and reducing the potential for fraud. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 21 
+ethereum.org  
+Identity and Reputation Systems 
+Theearliestalternativecryptocurrencyofall,Namecoin,attemptedtouseaBitcoin-likeblockchaintoprovidea                 
+nameregistrationsystem,whereuserscanregistertheirnamesinapublicdatabasealongsideotherdata.                 
+ThemajorcitedusecaseisforaDNSsystem,mappingdomainnameslike"bitcoin.org"(or,inNamecoin's                   
+case,"bitcoin.bit")toanIPaddress.Otherusecasesincludeemailauthenticationandpotentiallymore                
+advancedreputationsystems.HereisthebasiccontracttoprovideaNamecoin-likenameregistrationsystem                
+on Ethereum: 
+if !contract.storage[tx.data[0]]: 
+    contract.storage[tx.data[0]] = tx.data[1] 
+ 
+Thecontractisverysimple;allitisisadatabaseinsidetheEthereumnetworkthatcanbeaddedto,butnot                       
+modifiedorremovedfrom.Anyonecanregisteranamewithsomevalue,andthatregistrationthensticks                  
+forever.Amoresophisticatednameregistrationcontractwillalsohavea"functionclause"allowingother                
+contractstoqueryit,aswellasamechanismforthe"owner"(ie.thefirstregisterer)ofanametochangethe                       
+data or transfer ownership. One can even add reputation and web-of-trust functionality on top. 
+ 
+Decentralized File Storage 
+Overthepastfewyears,therehaveemergedanumberofpopularonlinefilestoragestartups,themost                   
+prominentbeingDropbox,seekingtoallowuserstouploadabackupoftheirharddriveandhavetheservice                    
+storethebackupandallowtheusertoaccessitinexchangeforamonthlyfee.However,atthispointthefile                       
+storagemarketisattimesrelativelyinefficient;acursorylookatvariousexistingsolutionsshowsthat,                 
+particularlyatthe"uncannyvalley"20-200GBlevelatwhichneitherfreequotasnorenterprise-leveldiscounts                 
+kickin,monthlypricesformainstreamfilestoragecostsaresuchthatyouarepayingformorethanthecostof                      
+theentireharddriveinasinglemonth.Ethereumcontractscanallowforthedevelopmentofadecentralized                   
+filestorageecosystem,whereindividualuserscanearnsmallquantitiesofmoneybyrentingouttheirown                  
+hard drives and unused space can be used to further drive down the costs of file storage. 
+Thekeyunderpinningpieceofsuchadevicewouldbewhatwehavetermedthe"decentralizedDropbox                  
+contract".Thiscontractworksasfollows.First,onesplitsthedesireddataupintoblocks,encryptingeachblock                   
+forprivacy,andbuildsaMerkletreeoutofit.Onethenmakesacontractwiththerulethat,everyNblocks,the                        
+contractwouldpickarandomindexintheMerkletree(usingthepreviousblockhash,accessiblefrom                  
+contractcode,asasourceofrandomness),andgiveXethertothefirstentitytosupplyatransactionwitha                      
+ 
+Page 22 
+ethereum.org simplifiedpaymentverification-likeproofofownershipoftheblockatthatparticularindexinthetree.Whena                   
+userwantstore-downloadtheirfile,theycanuseamicropaymentchannelprotocol(eg.pay1szaboper32                    
+kilobytes)torecoverthefile;themostfee-efficientapproachisforthepayernottopublishthetransactionuntil                    
+theend,insteadreplacingthetransactionwithaslightlymorelucrativeonewiththesamenonceafterevery                   
+32 kilobytes. 
+Animportantfeatureoftheprotocolisthat,althoughitmayseemlikeoneistrustingmanyrandomnodesnot                     
+todecidetoforgetthefile,onecanreducethatriskdowntonear-zerobysplittingthefileintomanypiecesvia                       
+secretsharing,andwatchingthecontractstoseeeachpieceisstillinsomenode'spossession.Ifacontractis                     
+still paying out money, that provides a cryptographic proof that someone out there is still storing the file. 
+ 
+Decentralized Autonomous Organizations 
+Thegeneralconceptofa"decentralizedorganization"isthatofavirtualentitythathasacertainsetof                    
+membersorshareholderswhich,perhapswitha67%majority,havetherighttospendtheentity'sfundsand                   
+modifyitscode.Thememberswouldcollectivelydecideonhowtheorganizationshouldallocateitsfunds.                 
+MethodsforallocatingaDAO'sfundscouldrangefrombounties,salariestoevenmoreexoticmechanisms                 
+suchasaninternalcurrencytorewardwork.Thisessentiallyreplicatesthelegaltrappingsofatraditional                  
+companyornonprofitbutusingonlycryptographicblockchaintechnologyforenforcement.Sofarmuchofthe                 
+talkaroundDAOshasbeenaroundthe"capitalist"modelofa"decentralizedautonomouscorporation"(DAC)                
+withdividend-receivingshareholdersandtradableshares;analternative,perhapsdescribedasa             
+"decentralizedautonomouscommunity",wouldhaveallmembershaveanequalshareinthedecision               
+makingandrequire67%ofexistingmemberstoagreetoaddorremoveamember.Therequirementthatone                    
+person can only have one membership would then need to be enforced collectively by the group. 
+AgeneraloutlineforhowtocodeaDOisasfollows.Thesimplestdesignissimplyapieceofself-modifying                      
+codethatchangesiftwothirdsofmembersagreeonachange.Althoughcodeistheoreticallyimmutable,one                   
+caneasilygetaroundthisandhavede-factomutabilitybyhavingchunksofthecodeinseparatecontracts,                   
+andhavingtheaddressofwhichcontractstocallstoredinthemodifiablestorage.Inasimple                  
+implementationofsuchaDAOcontract,therewouldbethreetransactiontypes,distinguishedbythedata                 
+provided in the transaction: 
+● [0,i,K,V]toregisteraproposalwithindexitochangetheaddressatstorageindexKto                  
+value V 
+● [0,i] to register a vote in favor of proposal i 
+● [2,i] to finalize proposal i if enough votes have been made 
+Thecontractwouldthenhaveclausesforeachofthese.Itwouldmaintainarecordofallopenstorage                    
+changes,alongwithalistofwhovotedforthem.Itwouldalsohavealistofallmembers.Whenanystorage                       
+ 
+Page 23 
+ethereum.org changegetstotwothirdsofmembersvotingforit,afinalizingtransactioncouldexecutethechange.Amore                    
+sophisticatedskeletonwouldalsohavebuilt-invotingabilityforfeatureslikesendingatransaction,adding                
+membersandremovingmembers,andmayevenprovideforLiquidDemocracy-stylevotedelegation(ie.               
+anyonecanassignsomeonetovoteforthem,andassignmentistransitivesoifAassignsBandBassignsC                      
+thenCdeterminesA'svote).ThisdesignwouldallowtheDOtogroworganicallyasadecentralized                  
+community,allowingpeopletoeventuallydelegatethetaskoffilteringoutwhoisamembertospecialists,                  
+althoughunlikeinthe"currentsystem"specialistscaneasilypopinandoutofexistenceovertimeas                   
+individual community members change their alignments. 
+Analternativemodelisforadecentralizedcorporation,whereanyaccountcanhavezeroormoreshares,and                   
+twothirdsofthesharesarerequiredtomakeadecision.Acompleteskeletonwouldinvolveasset                  
+managementfunctionality,theabilitytomakeanoffertobuyorsellshares,andtheabilitytoacceptoffers                    
+(preferablywithanorder-matchingmechanisminsidethecontract).DelegationwouldalsoexistLiquid              
+Democracy-style, generalizing the concept of a "board of directors". 
+Inthefuture,moreadvancedmechanismsfororganizationalgovernancemaybeimplemented;itisatthis                 
+pointthatadecentralizedorganization(DO)canstarttobedescribedasadecentralizedautonomous                
+organization(DAO).ThedifferencebetweenaDOandaDAOisfuzzy,butthegeneraldividinglineiswhether                    
+thegovernanceisgenerallycarriedoutviaapolitical-likeprocessoran“automatic”process;agoodintuitive                  
+testisthe“nocommonlanguage”criterion:cantheorganizationstillfunctionifnotwomembersspokethe                   
+samelanguage?Clearly,asimpletraditionalshareholder-stylecorporationwouldfail,whereassomethinglike              
+theBitcoinprotocolwouldbemuchmorelikelytosucceed.RobinHanson’sfutarchy,amechanismfor                 
+organizationalgovernanceviapredictionmarkets,isagoodexampleofwhattruly“autonomous”governance               
+mightlooklike.NotethatoneshouldnotnecessarilyassumethatallDAOsaresuperiortoallDOs;automation                    
+issimplyaparadigmthatislikelytohavehaveverylargebenefitsincertainparticularplacesandmaynotbe                      
+practical in others, and many semi-DAOs are also likely to exist. 
+Further Applications 
+1.Savingswallets.SupposethatAlicewantstokeepherfundssafe,butisworriedthatshewillloseor                     
+someone will hack her private key. She puts ether into a contract with Bob, a bank, as follows: 
+● Alice alone can withdraw a maximum of 1% of the funds per day. 
+● Bobalonecanwithdrawamaximumof1%ofthefundsperday,butAlicehastheabilitytomakea                      
+transaction with her key shutting off this ability. 
+● Alice and Bob together can withdraw anything. 
+Normally,1%perdayisenoughforAlice,andifAlicewantstowithdrawmoreshecancontactBobforhelp.If                       
+Alice'skeygetshacked,sherunstoBobtomovethefundstoanewcontract.Ifshelosesherkey,Bobwillget                         
+the funds out eventually. If Bob turns out to be malicious, then she can turn off his ability to withdraw. 
+ 
+Page 24 
+ethereum.org 2.Cropinsurance.Onecaneasilymakeafinancialderivativescontractbutusingadatafeedoftheweather                    
+insteadofanypriceindex.IfafarmerinIowapurchasesaderivativethatpaysoutinverselybasedonthe                     
+precipitationinIowa,thenifthereisadrought,thefarmerwillautomaticallyreceivemoneyandifthereis                    
+enough rain the farmer will be happy because their crops would do well. 
+3.Adecentralizeddatafeed.Forfinancialcontractsfordifference,itmayactuallybepossibletodecentralize                  
+thedatafeedviaaprotocolcalled"SchellingCoin".SchellingCoinbasicallyworksasfollows:Npartiesallput                  
+intothesystemthevalueofagivendatum(eg.theETH/USDprice),thevaluesaresorted,andeveryone                    
+betweenthe25thand75thpercentilegetsonetokenasareward.Everyonehastheincentivetoprovidethe                    
+answerthateveryoneelsewillprovide,andtheonlyvaluethatalargenumberofplayerscanrealistically                   
+agreeonistheobviousdefault:thetruth.Thiscreatesadecentralizedprotocolthatcantheoreticallyprovide                  
+anynumberofvalues,includingtheETH/USDprice,thetemperatureinBerlinoreventheresultofaparticular                    
+hard computation. 
+4.Smartmulti-signatureescrow.Bitcoinallowsmultisignaturetransactioncontractswhere,forexample,             
+threeoutofagivenfivekeyscanspendthefunds.Ethereumallowsformoregranularity;forexample,fourout                     
+offivecanspendeverything,threeoutoffivecanspendupto10%perday,andtwooutoffivecanspendupto                          
+0.5%perday.Additionally,Ethereummultisigisasynchronous-twopartiescanregistertheirsignatureson                 
+the blockchain at different times and the last signature will automatically send the transaction. 
+5.Cloudcomputing.TheEVMtechnologycanalsobeusedtocreateaverifiablecomputingenvironment,                 
+allowinguserstoaskotherstocarryoutcomputationsandthenoptionallyaskforproofsthatcomputationsat                   
+certainrandomlyselectedcheckpointsweredonecorrectly.Thisallowsforthecreationofacloudcomputing                 
+marketwhereanyusercanparticipatewiththeirdesktop,laptoporspecializedserver,andspot-checking                
+togetherwithsecuritydepositscanbeusedtoensurethatthesystemistrustworthy(ie.nodescannot                  
+profitablycheat).Althoughsuchasystemmaynotbesuitableforalltasks;tasksthatrequireahighlevelof                     
+inter-processcommunication,forexample,cannoteasilybedoneonalargecloudofnodes.Othertasks,                 
+however,aremucheasiertoparallelize;projectslikeSETI@home,folding@homeandgeneticalgorithmscan               
+easily be implemented on top of such a platform. 
+6.Peer-to-peergambling.Anynumberofpeer-to-peergamblingprotocols,suchasFrankStajanoand               
+RichardClayton'sCyberdice,canbeimplementedontheEthereumblockchain.Thesimplestgambling              
+protocolisactuallysimplyacontractfordifferenceonthenextblockhash,andmoreadvancedprotocolscan                   
+be built up from there, creating gambling services with near-zero fees that have no ability to cheat. 
+7.Predictionmarkets.ProvidedanoracleorSchellingCoin,predictionmarketsarealsoeasytoimplement,                
+andpredictionmarketstogetherwithSchellingCoinmayprovetobethefirstmainstreamapplicationof                
+futarchy as a governance protocol for decentralized organizations. 
+8. On-chain decentralized marketplaces, using the identity and reputation system as a base. 
+ 
+Page 25 
+ethereum.org  
+ 
+Miscellanea And Concerns 
+Modified GHOST Implementation 
+The"GreedyHeaviestObservedSubtree"(GHOST)protocolisaninnovationfirstintroducedbyYonatan               
+SompolinskyandAvivZoharinDecember2013.ThemotivationbehindGHOSTisthatblockchainswithfast                 
+confirmationtimescurrentlysufferfromreducedsecurityduetoahighstalerate-becauseblockstakea                   
+certaintimetopropagatethroughthenetwork,ifminerAminesablockandthenminerBhappenstomine                     
+anotherblockbeforeminerA'sblockpropagatestoB,minerB'sblockwillendupwastedandwillnotcontribute                     
+tonetworksecurity.Furthermore,thereisacentralizationissue:ifminerAisaminingpoolwith30%                   
+hashpowerandBhas10%hashpower,Awillhaveariskofproducingastaleblock70%ofthetime(sincethe                       
+other30%ofthetimeAproducedthelastblockandsowillgetminingdataimmediately)whereasBwillhave                      
+ariskofproducingastaleblock90%ofthetime.Thus,iftheblockintervalisshortenoughforthestalerateto                         
+behigh,Awillbesubstantiallymoreefficientsimplybyvirtueofitssize.Withthesetwoeffectscombined,                    
+blockchainswhichproduceblocksquicklyareverylikelytoleadtooneminingpoolhavingalargeenough                   
+percentage of the network hashpower to have de facto control over the mining process. 
+AsdescribedbySompolinskyandZohar,GHOSTsolvesthefirstissueofnetworksecuritylossbyincluding                  
+staleblocksinthecalculationofwhichchainisthe"longest";thatistosay,notjusttheparentandfurther                      
+ancestorsofablock,butalsothestalechildrenoftheblock'sancestors(inEthereumjargon,"uncles")are                   
+addedtothecalculationofwhichblockhasthelargesttotalproofofworkbackingit.Tosolvethesecondissue                      
+ofcentralizationbias,wegobeyondtheprotocoldescribedbySompolinskyandZohar,andalsoallowstalesto                   
+beregisteredintothemainchaintoreceiveablockreward:astaleblockreceives93.75%ofitsbasereward,                     
+andthenephewthatincludesthestaleblockreceivestheremaining6.25%.Transactionfees,however,arenot                  
+awarded to uncles. 
+EthereumimplementsasimplifiedversionofGHOSTwhichonlygoesdownfivelevels.Specifically,astale                 
+blockcanonlybeincludedasanunclebythe2ndto5thgenerationchildofitsparent,andnotanyblockwith                        
+amoredistantrelation(eg.6thgenerationchildofaparent,or3rdgenerationchildofagrandparent).This                    
+wasdoneforseveralreasons.First,unlimitedGHOSTwouldincludetoomanycomplicationsintothe                
+calculationofwhichunclesforagivenblockarevalid.Second,unlimitedGHOSTwithcompensationasused                  
+inEthereumremovestheincentiveforaminertomineonthemainchainandnotthechainofapublic                      
+attacker.Finally,calculationsshowthatfive-levelGHOSTwithincentivizationisover95%efficientevenwitha                 
+15s block time, and miners with 25% hashpower show centralization gains of less than 3%. 
+ 
+Page 26 
+ethereum.org  
+ 
+Fees 
+Becauseeverytransactionpublishedintotheblockchainimposesonthenetworkthecostofneedingto                 
+downloadandverifyit,thereisaneedforsomeregulatorymechanism,typicallyinvolvingtransactionfees,to                  
+preventabuse.Thedefaultapproach,usedinBitcoin,istohavepurelyvoluntaryfees,relyingonminerstoact                    
+asthegatekeepersandsetdynamicminimums.Thisapproachhasbeenreceivedveryfavorablyinthe                 
+Bitcoincommunityparticularlybecauseitis"market-based",allowingsupplyanddemandbetweenminers              
+andtransactionsendersdeterminetheprice.Theproblemwiththislineofreasoningis,however,that                 
+transactionprocessingisnotamarket;althoughitisintuitivelyattractivetoconstruetransactionprocessing                
+asaservicethattheminerisofferingtothesender,inrealityeverytransactionthataminerincludeswillneed                      
+tobeprocessedbyeverynodeinthenetwork,sothevastmajorityofthecostoftransactionprocessingisborne                      
+bythirdpartiesandnottheminerthatismakingthedecisionofwhetherornottoincludeit.Hence,                     
+tragedy-of-the-commons problems are very likely to occur. 
+However,asitturnsoutthisflawinthemarket-basedmechanism,whengivenaparticularinaccurate                 
+simplifying assumption, magically cancels itself out. The argument is as follows. Suppose that: 
+1.Atransactionleadstokoperations,offeringtherewardkRtoanyminerthatincludesitwhereRis                    
+set by the sender and k and R are (roughly) visible to the miner beforehand. 
+2.An operation has a processing cost of C to any node (ie. all nodes have equal efficiency) 
+3.There are N mining nodes, each with exactly equal processing power (ie. 1/N of total) 
+4.No non-mining full nodes exist. 
+Aminerwouldbewillingtoprocessatransactioniftheexpectedrewardisgreaterthanthecost.Thus,the                     
+expectedrewardiskR/Nsincetheminerhasa1/Nchanceofprocessingthenextblock,andtheprocessing                    
+costfortheminerissimplykC.Hence,minerswillincludetransactionswherekR/N>kC,orR>NC.NotethatR                        
+istheper-operationfeeprovidedbythesender,andisthusalowerboundonthebenefitthatthesenderderives                      
+fromthetransaction,andNCisthecosttotheentirenetworktogetherofprocessinganoperation.Hence,                   
+minershavetheincentivetoincludeonlythosetransactionsforwhichthetotalutilitarianbenefitexceedsthe                  
+cost. 
+However, there are several important deviations from those assumptions in reality: 
+1.Theminerdoespayahighercosttoprocessthetransactionthantheotherverifyingnodes,since                  
+theextraverificationtimedelaysblockpropagationandthusincreasesthechancetheblockwill                
+become a stale. 
+2.There do exist non-mining full nodes. 
+ 
+Page 27 
+ethereum.org 3.The mining power distribution may end up radically inegalitarian in practice. 
+4.Speculators,politicalenemiesandcrazieswhoseutilityfunctionincludescausingharmtothe              
+networkdoexist,andtheycancleverlysetupcontractswhosecostismuchlowerthanthecost                   
+paid by other verifying nodes. 
+ 
+Point1aboveprovidesatendencyfortheminertoincludefewertransactions,andpoint2increasesNC;                   
+hence,thesetwoeffectsatleastpartiallycanceleachotherout.Points3and4arethemajorissue;tosolve                      
+themwesimplyinstituteafloatingcap:noblockcanhavemoreoperationsthanBLK_LIMIT_FACTORtimesthe                  
+long-term exponential moving average. Specifically: 
+blk.oplimit=floor((blk.parent.oplimit*(EMAFACTOR-1)+floor(parent.opcount*BLK_LIMIT_FACTOR))/             
+EMA_FACTOR) 
+BLK_LIMIT_FACTORandEMA_FACTORareconstantsthatwillbesetto65536and1.5forthetimebeing,but                   
+will likely be changed after further analysis. 
+Computation And Turing-Completeness 
+AnimportantnoteisthattheEthereumvirtualmachineisTuring-complete;thismeansthatEVMcodecan                  
+encodeanycomputationthatcanbeconceivablycarriedout,includinginfiniteloops.EVMcodeallowslooping                 
+intwoways.First,thereisaJUMPinstructionthatallowstheprogramtojumpbacktoapreviousspotinthe                       
+code,andaJUMPIinstructiontodoconditionaljumping,allowingforstatementslikewhilex<27:x=x*2.                       
+Second,contractscancallothercontracts,potentiallyallowingforloopingthroughrecursion.Thisnaturally               
+leadstoaproblem:canmalicioususersessentiallyshutminersandfullnodesdownbyforcingthemtoenter                    
+intoaninfiniteloop?Theissuearisesbecauseofaproblemincomputerscienceknownasthehaltingproblem:                    
+there is no way to tell, in the general case, whether or not a given program will ever halt. 
+Asdescribedinthestatetransitionsection,oursolutionworksbyrequiringatransactiontosetamaximum                   
+numberofcomputationalstepsthatitisallowedtotake,andifexecutiontakeslongercomputationisreverted                   
+butfeesarestillpaid.Messagesworkinthesameway.Toshowthemotivationbehindoursolution,consider                    
+the following examples: 
+● Anattackercreatesacontractwhichrunsaninfiniteloop,andthensendsatransaction                
+activatingthatlooptotheminer.Theminerwillprocessthetransaction,runningtheinfiniteloop,                 
+andwaitforittorunoutofgas.Eventhoughtheexecutionrunsoutofgasandstopshalfway                     
+through,thetransactionisstillvalidandtheminerstillclaimsthefeefromtheattackerforeach                   
+computational step. 
+● Anattackercreatesaverylonginfiniteloopwiththeintentofforcingtheminertokeep                  
+computingforsuchalongtimethatbythetimecomputationfinishesafewmoreblockswillhave                   
+comeoutanditwillnotbepossiblefortheminertoincludethetransactiontoclaimthefee.However,                     
+ 
+Page 28 
+ethereum.org theattackerwillberequiredtosubmitavalueforSTARTGASlimitingthenumberofcomputational                 
+stepsthatexecutioncantake,sotheminerwillknowaheadoftimethatthecomputationwilltakean                    
+excessively large number of steps. 
+● Anattackerseesacontractwithcodeofsomeformlikesend(A,contract.storage[A]);             
+contract.storage[A]=0,andsendsatransactionwithjustenoughgastorunthefirststepbutnotthe                    
+second(ie.makingawithdrawalbutnotlettingthebalancegodown).Thecontractauthordoesnot                  
+needtoworryaboutprotectingagainstsuchattacks,becauseifexecutionstopshalfwaythroughthe                
+changes get reverted. 
+● Afinancialcontractworksbytakingthemedianofnineproprietarydatafeedsinorderto                 
+minimizerisk.Anattackertakesoveroneofthedatafeeds,whichisdesignedtobemodifiablevia                   
+thevariable-address-callmechanismdescribedinthesectiononDAOs,andconvertsittorunan                
+infiniteloop,therebyattemptingtoforceanyattemptstoclaimfundsfromthefinancialcontractto                 
+runoutofgas.However,thefinancialcontractcansetagaslimitonthemessagetopreventthis                    
+problem. 
+ThealternativetoTuring-completenessisTuring-incompleteness,whereJUMPandJUMPIdonotexistand               
+onlyonecopyofeachcontractisallowedtoexistinthecallstackatanygiventime.Withthissystem,thefee                        
+systemdescribedandtheuncertaintiesaroundtheeffectivenessofoursolutionmightnotbenecessary,as                 
+thecostofexecutingacontractwouldbeboundedabovebyitssize.Additionally,Turing-incompletenessisnot                  
+eventhatbigalimitation;outofallthecontractexampleswehaveconceivedinternally,sofaronlyone                    
+requiredaloop,andeventhatloopcouldberemovedbymaking26repetitionsofaone-linepieceofcode.                     
+GiventheseriousimplicationsofTuring-completeness,andthelimitedbenefit,whynotsimplyhavea                
+Turing-incompletelanguage?Inreality,however,Turing-incompletenessisfarfromaneatsolutiontothe               
+problem. To see why, consider the following contracts: 
+C0: call(C1); call(C1); 
+C1: call(C2); call(C2); 
+C2: call(C3); call(C3); 
+... 
+C49: call(C50); call(C50); 
+C50: (run one step of a program and record the change in storage) 
+ 
+Now,sendatransactiontoA.Thus,in51transactions,wehaveacontractthattakesup250computational                    
+steps.Minerscouldtrytodetectsuchlogicbombsaheadoftimebymaintainingavaluealongsideeach                   
+contractspecifyingthemaximumnumberofcomputationalstepsthatitcantake,andcalculatingthisfor                 
+contractscallingothercontractsrecursively,butthatwouldrequireminerstoforbidcontractsthatcreate                
+othercontracts(sincethecreationandexecutionofall50contractsabovecouldeasilyberolledintoasingle                    
+contract).Anotherproblematicpointisthattheaddressfieldofamessageisavariable,soingeneralitmay                     
+notevenbepossibletotellwhichothercontractsagivencontractwillcallaheadoftime.Hence,allinall,we                       
+haveasurprisingconclusion:Turing-completenessissurprisinglyeasytomanage,andthelackof               
+ 
+Page 29 
+ethereum.org Turing-completenessisequallysurprisinglydifficulttomanageunlesstheexactsamecontrolsareinplace-                 
+but in that case why not just let the protocol be Turing-complete? 
+ 
+Currency And Issuance 
+TheEthereumnetworkincludesitsownbuilt-incurrency,ether,whichservesthedualpurposeofprovidinga                  
+primaryliquiditylayertoallowforefficientexchangebetweenvarioustypesofdigitalassetsand,more                 
+importantly,ofprovidingamechanismforpayingtransactionfees.Forconvenienceandtoavoidfuture                
+argument (see the current mBTC/uBTC/satoshi debate in Bitcoin), the denominations will be pre-labelled: 
+● 1: wei 
+● 10^12: szabo 
+● 10^15: finney 
+● 10^18: ether 
+Thisshouldbetakenasanexpandedversionoftheconceptof"dollars"and"cents"or"BTC"and"satoshi".Inthenearfuture,weexpect"ether"tobe                             
+usedforordinarytransactions,"finney"formicrotransactionsand"szabo"and"wei"fortechnicaldiscussionsaroundfeesandprotocol                   
+implementation. 
+The issuance model will be as follows: 
+● Etherwillbereleasedinacurrencysaleatthepriceof1337-2000etherperBTC,a                  
+mechanismintendedtofundtheEthereumorganizationandpayfordevelopmentthathasbeen               
+usedwithsuccessbyanumberofothercryptographicplatforms.Earlierbuyerswillbenefitfromlarger                 
+discounts.TheBTCreceivedfromthesalewillbeusedentirelytopaysalariesandbountiesto                  
+developers, researchers and projects in the cryptocurrency ecosystem. 
+● 0.099xthetotalamountsoldwillbeallocatedtoearlycontributorswhoparticipatedin               
+developmentbeforeBTCfundingorcertaintyoffundingwasavailable,andanother0.099xwillbe                
+allocated to long-term research projects. 
+● 0.26x the total amount sold will be allocated to miners per year forever after that point. 
+ 
+ 
+ 
+ 
+ 
+Page 30 
+ethereum.org  
+Issuance Breakdown 
+Thepermanentlinearsupplygrowthmodelreducestheriskofwhatsomeseeasexcessivewealth                 
+concentrationinBitcoin,andgivesindividualslivinginpresentandfutureerasafairchancetoacquire                  
+currencyunits,whileatthesametimediscouragingdepreciationofetherbecausethe"supplygrowthrate"as                  
+apercentagestilltendstozeroovertime.Wealsotheorizethatbecausecoinsarealwayslostovertimedueto                      
+carelessness,death,etc,andcoinlosscanbemodeledasapercentageofthetotalsupplyperyear,thatthe                     
+totalcurrencysupplyincirculationwillinfacteventuallystabilizeatavalueequaltotheannualissuance                   
+dividedbythelossrate(eg.atalossrateof1%,oncethesupplyreaches26Xthen0.26Xwillbeminedand                        
+0.26X lost every year, creating an equilibrium). 
+ 
+Group At launch After 1 year After 5 years 
+Currency units 1.198X 1.458X 2.498X 
+Purchasers 83.5% 68.6% 40.0% 
+Early contributor distribution 8.26% 6.79% 3.96% 
+Long-term endowment 8.26% 6.79% 3.96% 
+Miners 0% 17.8% 52.0% 
+ 
+Despitethelinearcurrencyissuance,justlikewithBitcoinovertimethesupplygrowthrateneverthelesstends                  
+to zero. 
+ 
+ 
+Page 31 
+ethereum.org 
+Mining Centralization 
+TheBitcoinminingalgorithmbasicallyworksbyhavingminerscomputeSHA256onslightlymodified               
+versionsoftheblockheadermillionsoftimesoverandoveragain,untileventuallyonenodecomesupwitha                     
+versionwhosehashislessthanthetarget(currentlyaround2190).However,thisminingalgorithmis                 
+vulnerabletotwoformsofcentralization.First,theminingecosystemhascometobedominatedbyASICs                  
+(application-specificintegratedcircuits),computerchipsdesignedfor,andthereforethousandsoftimesmore              
+efficientat,thespecifictaskofBitcoinmining.ThismeansthatBitcoinminingisnolongerahighly                   
+decentralizedandegalitarianpursuit,requiringmillionsofdollarsofcapitaltoeffectivelyparticipatein.               
+Second,mostBitcoinminersdonotactuallyperformblockvalidationlocally;instead,theyrelyona                 
+centralizedminingpooltoprovidetheblockheaders.Thisproblemisarguablyworse:asofthetimeofthis                    
+writing,thetoptwominingpoolsindirectlycontrolroughly50%ofprocessingpowerintheBitcoinnetwork,                  
+althoughthisismitigatedbythefactthatminerscanswitchtootherminingpoolsifapoolorcoalition                     
+attempts a 51% attack. 
+ThecurrentintentatEthereumistouseaminingalgorithmbasedonrandomlygeneratingauniquehash                   
+functionforevery1000nonces,usingasufficientlybroadrangeofcomputationtoremovethebenefitof                  
+specializedhardware.Suchastrategywillcertainlynotreducethegainofcentralizationtozero,butitdoes                   
+notneedto.Notethateachindividualuser,ontheirprivatelaptopordesktop,canperformacertainquantityof                     
+miningactivityalmostforfree,payingonlyelectricitycosts,butafterthepointof100%CPUutilizationoftheir                    
+computeradditionalminingwillrequirethemtopayforbothelectricityandhardware.ASICminingcompanies                 
+needtopayforelectricityandhardwarestartingfromthefirsthash.Hence,ifthecentralizationgaincanbe                    
+kept to below this ratio, (E + H) / E, then even if ASICs are made there will still be room for ordinary miners. 
+Additionally,weintendtodesigntheminingalgorithmsothatminingrequiresaccesstotheentire                 
+blockchain,forcingminerstostoretheentireblockchainandatleastbecapableofverifyingeverytransaction.                  
+Thisremovestheneedforcentralizedminingpools;althoughminingpoolscanstillservethelegitimaterole                  
+ofeveningouttherandomnessofrewarddistribution,thisfunctioncanbeservedequallywellbypeer-to-peer                  
+poolswithnocentralcontrol.Itadditionallyhelpsfightcentralization,byincreasingthenumberoffullnodesin                   
+thenetworksothatthenetworkremainsreasonablydecentralizedevenifmostordinaryuserspreferlight                 
+clients. 
+ 
+ 
+ 
+ 
+ 
+Page 32 
+ethereum.org Scalability 
+OnecommonconcernaboutEthereumistheissueofscalability.LikeBitcoin,Ethereumsuffersfromtheflaw                  
+thateverytransactionneedstobeprocessedbyeverynodeinthenetwork.WithBitcoin,thesizeofthecurrent                     
+blockchainrestsatabout20GB,growingbyabout1MBperhour.IftheBitcoinnetworkweretoprocessVisa's                      
+2000transactionspersecond,itwouldgrowby1MBperthreeseconds(1GBperhour,8TBperyear).                      
+Ethereumislikelytosufferasimilargrowthpattern,worsenedbythefactthattherewillbemanyapplications                    
+ontopoftheEthereumblockchaininsteadofjustacurrencyasisthecasewithBitcoin,butamelioratedbythe                      
+fact that Ethereum full nodes need to store just the state instead of the entire blockchain history. 
+Theproblemwithsuchalargeblockchainsizeiscentralizationrisk.Iftheblockchainsizeincreasesto,say,                   
+100TB,thenthelikelyscenariowouldbethatonlyaverysmallnumberoflargebusinesseswouldrunfull                     
+nodes,withallregularusersusinglightSPVnodes.Insuchasituation,therearisesthepotentialconcernthat                    
+thefullnodescouldbandtogetherandallagreetocheatinsomeprofitablefashion(eg.changetheblock                    
+reward,givethemselvesBTC).Lightnodeswouldhavenowayofdetectingthisimmediately.Ofcourse,at                  
+leastonehonestfullnodewouldlikelyexist,andafterafewhoursinformationaboutthefraudwouldtrickleout                     
+throughchannelslikeReddit,butatthatpointitwouldbetoolate:itwouldbeuptotheordinaryusersto                       
+organizeanefforttoblacklistthegivenblocks,amassiveandlikelyinfeasiblecoordinationproblemona                  
+similarscaleasthatofpullingoffasuccessful51%attack.InthecaseofBitcoin,thisiscurrentlyaproblem,                      
+but there exists a blockchain modification suggested by Peter Todd which will alleviate this issue. 
+Inthenearterm,Ethereumwillusetwoadditionalstrategiestocopewiththisproblem.First,becauseofthe                    
+blockchain-basedminingalgorithms,atleasteveryminerwillbeforcedtobeafullnode,creatingalower                   
+boundonthenumberoffullnodes.Secondandmoreimportantly,however,wewillincludeanintermediate                  
+statetreerootintheblockchainafterprocessingeachtransaction.Evenifblockvalidationiscentralized,as                  
+longasonehonestverifyingnodeexists,thecentralizationproblemcanbecircumventedviaaverification                 
+protocol.Ifaminerpublishesaninvalidblock,thatblockmusteitherbebadlyformatted,orthestateS[n]is                     
+incorrect.SinceS[0]isknowntobecorrect,theremustbesomefirststateS[i]thatisincorrectwhereS[i-1]is                      
+correct.Theverifyingnodewouldprovidetheindexi,alongwitha"proofofinvalidity"consistingofthesubset                    
+ofPatriciatreenodesneedingtoprocessAPPLY(S[i-1],TX[i])->S[i].Nodeswouldbeabletousethosenodesto                    
+run that part of the computation, and see that the S[i] generated does not match the S[i] provided. 
+Another,moresophisticated,attackwouldinvolvethemaliciousminerspublishingincompleteblocks,sothe               
+fullinformationdoesnotevenexisttodeterminewhetherornotblocksarevalid.Thesolutiontothisisa                     
+challenge-responseprotocol:verificationnodesissue"challenges"intheformoftargettransactionindices,              
+anduponreceivinganodealightnodetreatstheblockasuntrusteduntilanothernode,whetherthemineror                     
+another verifier, provides a subset of Patricia nodes as a proof of validity. 
+ 
+Page 33 
+ethereum.org Putting It All Together: Decentralized Applications 
+Thecontractmechanismdescribedaboveallowsanyonetobuildwhatisessentiallyacommandline                
+applicationrunonavirtualmachinethatisexecutedbyconsensusacrosstheentirenetwork,allowingitto                   
+modifyagloballyaccessiblestateasits“harddrive”.However,formostpeople,thecommandlineinterface                  
+thatisthetransactionsendingmechanismisnotsufficientlyuser-friendlytomakedecentralizationan               
+attractivemainstreamalternative.Tothisend,acomplete“decentralizedapplication”shouldconsistofboth               
+low-levelbusiness-logiccomponents,whetherimplementedentirelyonEthereum,usingacombinationof             
+Ethereumandothersystems(eg.aP2Pmessaginglayer,oneofwhichiscurrentlyplannedtobeputintothe                     
+Ethereumclients)orothersystemsentirely,andhigh-levelgraphicaluserinterfacecomponents.The              
+Ethereumclient’sdesignistoserveasawebbrowser,butincludesupportfora“eth”JavascriptAPIobject,                    
+whichspecializedwebpagesviewedintheclientwillbeabletousetointeractwiththeEthereumblockchain.                    
+Fromthepointofviewofthe“traditional”web,thesewebpagesareentirelystaticcontent,sincetheblockchain                    
+andotherdecentralizedprotocolswillserveasacompletereplacementfortheserverforthepurposeof                  
+handlinguser-initiatedrequests.Eventually,decentralizedprotocols,hopefullythemselvesinsomefashion            
+using Ethereum, may be used to store the web pages themselves. 
+Conclusion 
+TheEthereumprotocolwasoriginallyconceivedasanupgradedversionofacryptocurrency,providing               
+advancedfeaturessuchason-blockchainescrow,withdrawallimitsandfinancialcontracts,gambling             
+marketsandthelikeviaahighlygeneralizedprogramminglanguage.TheEthereumprotocolwouldnot                
+"support"anyoftheapplicationsdirectly,buttheexistenceofaTuring-completeprogramminglanguage               
+meansthatarbitrarycontractscantheoreticallybecreatedforanytransactiontypeorapplication.Whatis                 
+moreinterestingaboutEthereum,however,isthattheEthereumprotocolmovesfarbeyondjustcurrency.                
+Protocolsanddecentralizedapplicationsarounddecentralizedfilestorage,decentralizedcomputationand            
+decentralizedpredictionmarkets,amongdozensofothersuchconcepts,havethepotentialtosubstantially               
+increasetheefficiencyofthecomputationalindustry,andprovideamassiveboosttootherpeer-to-peer                
+protocolsbyaddingforthefirsttimeaneconomiclayer.Finally,thereisalsoasubstantialarrayof                   
+applications that have nothing to do with money at all. 
+TheconceptofanarbitrarystatetransitionfunctionasimplementedbytheEthereumprotocolprovidesfora                  
+platformwithuniquepotential;ratherthanbeingaclosed-ended,single-purposeprotocolintendedfora               
+specificarrayofapplicationsindatastorage,gamblingorfinance,Ethereumisopen-endedbydesign,andwe                  
+believethatitisextremelywell-suitedtoservingasafoundationallayerforaverylargenumberofboth                    
+financial and non-financial protocols in the years to come. 
+ 
+Page 34 
+ethereum.org  
+ 
+ 
+ 
+ 
+Notes and Further Reading 
+Notes 
+1. AsophisticatedreadermaynoticethatinfactaBitcoinaddressisthehashoftheellipticcurve                   
+publickey,andnotthepublickeyitself.However,itisinfactperfectlylegitimatecryptographicterminologyto                   
+refertothepubkeyhashasapublickeyitself.ThisisbecauseBitcoin'scryptographycanbeconsideredtobea                      
+customdigitalsignaturealgorithm,wherethepublickeyconsistsofthehashoftheECCpubkey,thesignature                   
+consistsoftheECCpubkeyconcatenatedwiththeECCsignature,andtheverificationalgorithminvolves                
+checkingtheECCpubkeyinthesignatureagainsttheECCpubkeyhashprovidedasapublickeyandthen                    
+verifying the ECC signature against the ECC pubkey. 
+2. Technically, the median of the 11 previous blocks. 
+3. Internally,2and"CHARLIE"arebothnumbers,withthelatterbeinginbig-endianbase256                
+representation. Numbers can be at least 0 and at most 2^256-1. 
+          Further Reading 
+1. Intrinsic value: https://tinyurl.com/BitcoinMag-IntrinsicValue 
+2. Smart property: https://en.bitcoin.it/wiki/Smart_Property 
+3. Smart contracts: https://en.bitcoin.it/wiki/Contracts 
+4. B-money: http://www.weidai.com/bmoney.txt 
+5. Reusable proofs of work: http://www.finney.org/~hal/rpow/ 
+6. Secure property titles with owner authority: http://szabo.best.vwh.net/securetitle.html 
+7. Bitcoin whitepaper: http://bitcoin.org/bitcoin.pdf 
+8. Namecoin: https://namecoin.org/ 
+9. Zooko's triangle: http://en.wikipedia.org/wiki/Zooko's_triangle 
+10. Colored coins whitepaper: https://tinyurl.com/coloredcoin-whitepaper 
+11. Mastercoin whitepaper: https://github.com/mastercoin-MSC/spec 
+12. Decentralized autonomous corporations, Bitcoin Magazine: https://tinyurl.com/Bootstrapping-DACs 
+13. Simplified payment verification:https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification 
+14. Merkle trees: http://en.wikipedia.org/wiki/Merkle_tree 
+15. Patricia trees: http://en.wikipedia.org/wiki/Patricia_tree 
+16. GHOST: http://www.cs.huji.ac.il/~avivz/pubs/13/btc_scalability_full.pdf 
+17. StorJ and Autonomous Agents, Jeff Garzik: https://tinyurl.com/storj-agents 
+18. Mike Hearn on Smart Property at Turing Festival: http://www.youtube.com/watch?v=Pu4PAMFPo5Y 
+ 
+Page 35 
+ethereum.org 19. Ethereum RLP: https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP 
+20. Ethereum Merkle Patricia trees: https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree 
+21. Peter Todd on Merkle sum trees:http://sourceforge.net/p/bitcoin/mailman/message/31709140/ 
+ 
+Page 36 
+ethereum.org 

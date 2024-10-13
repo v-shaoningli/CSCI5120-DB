@@ -1,0 +1,8 @@
+{
+    "working_dir": "./nano_graphrag_cache_llm_web3",
+    "insert": {},
+    "query": {
+        "content": "What is Web3?",
+        "mode": "global"
+    }
+}
